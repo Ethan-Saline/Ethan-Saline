@@ -2,8 +2,50 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Home",
+    "title": "Ethan Saline’s Portfolio",
     "section": "",
-    "text": "TEST ME"
+    "text": "Data Scientist | B.A. Data Science, Minor in Statistics, Brigham Young University–Idaho (expected April 2027, GPA 3.96)\nLinkedIn | Email"
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Ethan Saline’s Portfolio",
+    "section": "About",
+    "text": "About\nI build explainable, production-style machine learning systems across computer vision, retrieval-augmented pipelines, and agentic AI. My work spans data engineering, automated MLOps pipelines (Airflow, Docker, PostgreSQL), and statistical modeling. I also designed my university’s first Agentics AI course."
+  },
+  {
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
+    "title": "Ethan Saline’s Portfolio",
+    "section": "Skills",
+    "text": "Skills\n\n\n\n\n\n\n\nLanguages\nPython, R, SQL, C#\n\n\nML / AI\nPredictive Modeling, Time Series Forecasting, Computer Vision (CNNs, YOLO), TensorFlow/Keras, Retrieval-Augmented Systems (FAISS), Grad-CAM Explainability, LLM Agents (LangChain, Ollama, Gemini)\n\n\nData Engineering\nETL/ELT, Data Modeling, Data Warehousing, Star Schema, PySpark, Polars, pandas, NumPy, PostgreSQL\n\n\nTools & Platforms\nAirflow, Docker, Git/GitHub, Power BI, ggplot, Excel\n\n\nTechniques\nMachine Learning, Statistical Analysis, Data Visualization, Data Wrangling\n\n\nLanguages (spoken)\nEnglish, Portuguese"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Ethan Saline’s Portfolio",
+    "section": "Experience",
+    "text": "Experience\n\nData Scientist, Pulse Decision Science\nWashington, DC | Apr 2026 – Sep 2026\n\nBuilt SQL-backed data pipelines that ingest, clean, and prepare raw data for downstream machine learning.\nDeveloped multiple predictive models delivered to political campaign clients to support data-driven decisions.\nCleaned and sampled datasets for delivery to external clients, with a focus on data quality.\n\n\n\nAI Curriculum Consultant, Brigham Young University–Idaho\nRexburg, ID | Jan 2026 – Apr 2026\n\nDesigned and built the university’s first Agentics AI course, including curriculum architecture, textbook website, and practice exercises, launching Fall 2026.\nDeveloped hands-on Colab labs for building LLM agents with Ollama and Gemini, orchestrated with LangChain.\n\n\n\nData Science Lab Director, Brigham Young University–Idaho\nRexburg, ID | Aug 2025 – Apr 2026\n\nDirected day-to-day operations of the Data Science Lab, supporting students and faculty across research and coursework.\nOnboarded and mentored new lab members on data workflows, tools, and reproducible analysis.\nEstablished lab standards for timekeeping and data collection, improving handoffs between student cohorts.\n\n\n\nBig Data Analytics Teaching Assistant, Brigham Young University–Idaho\nRexburg, ID | Apr 2026 – Present\n\nHeld weekly office hours to debug student code and explain Big Data architecture concepts.\nCollaborated with the professor to refine assignment rubrics and clarify instructions.\nGraded assignments and gave written feedback on technical accuracy and analytical thinking.\n\n\n\nMathLab Supervisor & Mentor, Brigham Young University–Idaho\nRexburg, ID | Sep 2024 – Present\n\nSupervised lab shifts of 8 tutors and resolved academic questions in real time.\nTutored 15+ students per week one-on-one in calculus and statistics.\nIdentified recurring student misconceptions in statistics and developed targeted explanation strategies.\n\n\n\nData Science Programming TA, Brigham Young University–Idaho\nRexburg, ID | Jun 2025 – Dec 2025\n\nAssisted students across 3 sections in Python data science workflows (pandas, NumPy, Polars, visualization libraries).\nDebugged code in office hours, explaining root causes to build lasting understanding."
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "Ethan Saline’s Portfolio",
+    "section": "Projects",
+    "text": "Projects\n\nMultimodal Chest X-Ray Diagnosis Pipeline\nPython BioViL FAISS Airflow Docker PostgreSQL Redis\n\nBuilt an end-to-end pipeline that turns chest X-ray DICOMs into radiology reports, per-pathology diagnosis probabilities, and Grad-CAM heatmaps (AUROC 0.72–0.82), with a human-in-the-loop validation step.\nDesigned a FAISS retrieval layer returning the 5 most similar historical studies per image: 89.7% Recall@5 at 1,200 studies, under 2 seconds per inference.\nOrchestrated a 9-step Airflow DAG (ingest, encode, retrieve, report, diagnose, validate) in Docker, persisting outputs to PostgreSQL with Redis caching.\nAutomated weekly retraining on 200 new MIMIC-CXR studies (377,000-image dataset) to simulate real hospital data influx, with uncertainty-label strategies chosen to reduce missed findings.\n\n\n\nCOVID Chest X-Ray Diagnosis CNN\nPython TensorFlow Keras\n\nBuilt a convolutional neural network to classify chest X-rays as COVID, pneumonia, tuberculosis, or healthy (89% accuracy).\nPreprocessed and augmented 7,500 images to improve generalization, and evaluated with AUC-ROC, precision, and recall to handle class imbalance.\n\n\n\nAssembly Line YOLO Detection\nPython YOLO CVAT\n\nTrained a YOLO model on conveyor-belt video to classify candy by color in real time.\nCompared labeling approaches (including CVAT annotation) for speed, accuracy, and downstream performance, and built a custom dataset from labeled video frames.\n\n\n\nHeart Failure Mortality Prediction\nR Logistic Regression\n\nBuilt a logistic regression model to predict mortality in 299 heart failure patients (80.3% accuracy at a 0.5 threshold).\nIdentified serum creatinine as the strongest continuous risk factor (OR 1.94), with ejection fraction protective (OR 0.94) and age 80+ raising odds (OR 5.08).\nShowed that a 3-feature model can perform well on small clinical datasets.\n\n\n\nCOVID-19 Transcriptomics\nR DESeq2\n\nAnalyzed 2,000+ differentially expressed genes and narrowed them to the 4 highest-confidence candidates tied to the COVID-19 immune response, using adjusted p-values and log2 fold-change thresholds.\nCommunicated results with volcano plots and heatmaps.\n\n\n\nInfluenza-Like Illness Time Series\nR STL ARIMA ETS\n\nDecomposed surveillance data into trend, seasonal, and residual components, then forecast future activity with ARIMA/ETS models and visualized results for non-technical audiences.\n\n\n\nRecommender System\nPython\n\nBuilt a co-occurrence recommender on anonymized interaction data using an optimized sparse matrix, and evaluated it with precision@k and recall@k."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Ethan Saline’s Portfolio",
+    "section": "Education",
+    "text": "Education\nB.A. in Data Science, Minor in Statistics Brigham Young University–Idaho | Expected April 2027 | GPA 3.96\nCertificates\n\nMachine Learning Specialization (Supervised ML, Unsupervised ML, Advanced Algorithms), Stanford Online\nMachine Learning, BYU–Idaho\nDatabases, BYU–Idaho"
+  },
+  {
+    "objectID": "index.html#leadership-service",
+    "href": "index.html#leadership-service",
+    "title": "Ethan Saline’s Portfolio",
+    "section": "Leadership & Service",
+    "text": "Leadership & Service\n\nFull-time Volunteer Missionary, São Paulo Interlagos Mission, Brazil\nOct 2021 – Oct 2023\n\nServed as Zone Leader, coordinating missionary teams, running weekly planning meetings, and setting goals with mission leadership.\nManaged finances as Financial Secretary for a mission of 80+ people, including budgets, reimbursements, and records.\nTrained new missionaries one-on-one, and led all meetings and training entirely in Portuguese.\n\n\nOpen to data science and machine learning opportunities. Feel free to reach out on LinkedIn."
   }
 ]

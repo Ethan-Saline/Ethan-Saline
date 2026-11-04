@@ -3,19 +3,20 @@ project:
   output-dir: docs
 
 website:
-  title: "My Repository"
+  title: "Ethan Saline's Portfolio"
   search: true
 
   navbar:
+    background: primary
+    foreground: light
     left:
-      - href: index.qmd
-        text: Home
-      - href: models/
-        text: Models & Theory
-      - href: statistical-analysis/
-        text: Statistical Analysis
-      - href: projects/
+      - href: projects/index.qmd
         text: Projects
+      - href: statistical-analysis/index.qmd
+        text: Statistical Analysis
+      - href: models/index.qmd
+        text: Models & Theory
+      
 
 format:
   html:
