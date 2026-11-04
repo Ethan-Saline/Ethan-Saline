@@ -3,8 +3,25 @@ project:
   output-dir: docs
 
 website:
-  title: "My Git Repository"
+  title: "My Repository"
+  search: true
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: models/
+        text: Models & Theory
+      - href: statistical-analysis/
+        text: Statistical Analysis
+      - href: projects/
+        text: Projects
 
 format:
   html:
     theme: cosmo
+    toc: true
+    smooth-scroll: true
+
+execute:
+  freeze: auto
