@@ -2,3 +2,86 @@
 title: "Models & Theory"
 ---
 
+# Linear Regression {.tabset .tabset-pills}
+## Overview
+## Mathematical Model
+## Application {.tabset .tabset-pills}
+### Python
+### R
+
+# Logistic Regression {.tabset .tabset-pills}
+## Overview
+## Mathematical Model
+## Application {.tabset .tabset-pills}
+### Python
+### R
+
+# Holts Winters {.tabset .tabset-pills}
+## Overview
+## Mathematical Model
+## Application {.tabset .tabset-pills}
+### Python
+### R
+
+# ARIMA {.tabset .tabset-pills}
+## Overview
+## Mathematical Model
+## Application {.tabset .tabset-pills}
+### Python
+### R
+
+# Decision Tree {.tabset .tabset-pills}
+## Overview
+## Mathematical Model
+## Application {.tabset .tabset-pills}
+### Python
+### R
+
+# Random Forest{.tabset .tabset-pills}
+## Overview
+## Mathematical Model
+## Application {.tabset .tabset-pills}
+### Python
+### R
+
+# XGBoost{.tabset .tabset-pills}
+## Overview
+## Mathematical Model
+## Application {.tabset .tabset-pills}
+### Python
+### R
+
+# Neural Networks{.tabset .tabset-pills}
+## Overview
+## Mathematical Model
+## Application {.tabset .tabset-pills}
+### Python
+### R
+
+# CNNs{.tabset .tabset-pills}
+## Overview
+## Mathematical Model
+## Application {.tabset .tabset-pills}
+### Python
+### R
+
+# RNNs{.tabset .tabset-pills}
+## Overview
+## Mathematical Model
+## Application {.tabset .tabset-pills}
+### Python
+### R
+
+# Transformers{.tabset .tabset-pills}
+## Overview
+## Mathematical Model
+## Application {.tabset .tabset-pills}
+### Python
+### R
+
+# Agents{.tabset .tabset-pills}
+## Overview
+## Mathematical Model
+## Application {.tabset .tabset-pills}
+### Python
+### R

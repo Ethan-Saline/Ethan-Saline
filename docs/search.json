@@ -1,5 +1,243 @@
 [
   {
+    "objectID": "statistical-analysis/index.html",
+    "href": "statistical-analysis/index.html",
+    "title": "Statistical Analysis",
+    "section": "",
+    "text": "Heart Mortality Housing Perdiction ANOVA Plane Influenza-Like Illness Time Series\nFull ARIMA MODEl"
+  },
+  {
+    "objectID": "models/index.html#overview-1",
+    "href": "models/index.html#overview-1",
+    "title": "Models & Theory",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "models/index.html#mathematical-model-1",
+    "href": "models/index.html#mathematical-model-1",
+    "title": "Models & Theory",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model"
+  },
+  {
+    "objectID": "models/index.html#application-1",
+    "href": "models/index.html#application-1",
+    "title": "Models & Theory",
+    "section": "Application",
+    "text": "Application\n\nPython\n\n\nR"
+  },
+  {
+    "objectID": "models/index.html#overview-2",
+    "href": "models/index.html#overview-2",
+    "title": "Models & Theory",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "models/index.html#mathematical-model-2",
+    "href": "models/index.html#mathematical-model-2",
+    "title": "Models & Theory",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model"
+  },
+  {
+    "objectID": "models/index.html#application-2",
+    "href": "models/index.html#application-2",
+    "title": "Models & Theory",
+    "section": "Application",
+    "text": "Application\n\nPython\n\n\nR"
+  },
+  {
+    "objectID": "models/index.html#overview-3",
+    "href": "models/index.html#overview-3",
+    "title": "Models & Theory",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "models/index.html#mathematical-model-3",
+    "href": "models/index.html#mathematical-model-3",
+    "title": "Models & Theory",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model"
+  },
+  {
+    "objectID": "models/index.html#application-3",
+    "href": "models/index.html#application-3",
+    "title": "Models & Theory",
+    "section": "Application",
+    "text": "Application\n\nPython\n\n\nR"
+  },
+  {
+    "objectID": "models/index.html#overview-4",
+    "href": "models/index.html#overview-4",
+    "title": "Models & Theory",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "models/index.html#mathematical-model-4",
+    "href": "models/index.html#mathematical-model-4",
+    "title": "Models & Theory",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model"
+  },
+  {
+    "objectID": "models/index.html#application-4",
+    "href": "models/index.html#application-4",
+    "title": "Models & Theory",
+    "section": "Application",
+    "text": "Application\n\nPython\n\n\nR"
+  },
+  {
+    "objectID": "models/index.html#overview-5",
+    "href": "models/index.html#overview-5",
+    "title": "Models & Theory",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "models/index.html#mathematical-model-5",
+    "href": "models/index.html#mathematical-model-5",
+    "title": "Models & Theory",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model"
+  },
+  {
+    "objectID": "models/index.html#application-5",
+    "href": "models/index.html#application-5",
+    "title": "Models & Theory",
+    "section": "Application",
+    "text": "Application\n\nPython\n\n\nR"
+  },
+  {
+    "objectID": "models/index.html#overview-6",
+    "href": "models/index.html#overview-6",
+    "title": "Models & Theory",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "models/index.html#mathematical-model-6",
+    "href": "models/index.html#mathematical-model-6",
+    "title": "Models & Theory",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model"
+  },
+  {
+    "objectID": "models/index.html#application-6",
+    "href": "models/index.html#application-6",
+    "title": "Models & Theory",
+    "section": "Application",
+    "text": "Application\n\nPython\n\n\nR"
+  },
+  {
+    "objectID": "models/index.html#overview-7",
+    "href": "models/index.html#overview-7",
+    "title": "Models & Theory",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "models/index.html#mathematical-model-7",
+    "href": "models/index.html#mathematical-model-7",
+    "title": "Models & Theory",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model"
+  },
+  {
+    "objectID": "models/index.html#application-7",
+    "href": "models/index.html#application-7",
+    "title": "Models & Theory",
+    "section": "Application",
+    "text": "Application\n\nPython\n\n\nR"
+  },
+  {
+    "objectID": "models/index.html#overview-8",
+    "href": "models/index.html#overview-8",
+    "title": "Models & Theory",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "models/index.html#mathematical-model-8",
+    "href": "models/index.html#mathematical-model-8",
+    "title": "Models & Theory",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model"
+  },
+  {
+    "objectID": "models/index.html#application-8",
+    "href": "models/index.html#application-8",
+    "title": "Models & Theory",
+    "section": "Application",
+    "text": "Application\n\nPython\n\n\nR"
+  },
+  {
+    "objectID": "models/index.html#overview-9",
+    "href": "models/index.html#overview-9",
+    "title": "Models & Theory",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "models/index.html#mathematical-model-9",
+    "href": "models/index.html#mathematical-model-9",
+    "title": "Models & Theory",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model"
+  },
+  {
+    "objectID": "models/index.html#application-9",
+    "href": "models/index.html#application-9",
+    "title": "Models & Theory",
+    "section": "Application",
+    "text": "Application\n\nPython\n\n\nR"
+  },
+  {
+    "objectID": "models/index.html#overview-10",
+    "href": "models/index.html#overview-10",
+    "title": "Models & Theory",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "models/index.html#mathematical-model-10",
+    "href": "models/index.html#mathematical-model-10",
+    "title": "Models & Theory",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model"
+  },
+  {
+    "objectID": "models/index.html#application-10",
+    "href": "models/index.html#application-10",
+    "title": "Models & Theory",
+    "section": "Application",
+    "text": "Application\n\nPython\n\n\nR"
+  },
+  {
+    "objectID": "models/index.html#overview-11",
+    "href": "models/index.html#overview-11",
+    "title": "Models & Theory",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "models/index.html#mathematical-model-11",
+    "href": "models/index.html#mathematical-model-11",
+    "title": "Models & Theory",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model"
+  },
+  {
+    "objectID": "models/index.html#application-11",
+    "href": "models/index.html#application-11",
+    "title": "Models & Theory",
+    "section": "Application",
+    "text": "Application\n\nPython\n\n\nR"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Ethan Saline’s Portfolio",
@@ -47,5 +285,12 @@
     "title": "Ethan Saline’s Portfolio",
     "section": "Leadership & Service",
     "text": "Leadership & Service\n\nFull-time Volunteer Missionary, São Paulo Interlagos Mission, Brazil\nOct 2021 – Oct 2023\n\nServed as Zone Leader, coordinating missionary teams, running weekly planning meetings, and setting goals with mission leadership.\nManaged finances as Financial Secretary for a mission of 80+ people, including budgets, reimbursements, and records.\nTrained new missionaries one-on-one, and led all meetings and training entirely in Portuguese.\n\n\nOpen to data science and machine learning opportunities. Feel free to reach out on LinkedIn."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Chest X Ray Covid CNN Assembly Line YOLO Recommender System\nCovid Transcriptomics"
   }
 ]

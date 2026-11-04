@@ -2,3 +2,11 @@
 title: "Projects"
 ---
 
+Chest X Ray
+Covid CNN
+Assembly Line YOLO
+Recommender System
+
+Covid Transcriptomics
+
+

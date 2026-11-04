@@ -2,3 +2,10 @@
 title: "Statistical Analysis"
 ---
 
+Heart Mortality
+Housing Perdiction
+ANOVA Plane
+Influenza-Like Illness Time Series
+Patho-Nueral stuff
+
+Full ARIMA MODEl
