@@ -2,7 +2,7 @@
 
 **Data Scientist** | B.A. Data Science, Minor in Statistics, Brigham Young University–Idaho (expected April 2027, GPA 3.96)
 
-[LinkedIn](https://www.linkedin.com/in/ethan-saline) | [Email](mailto:e.s.w.saline@gmail.com) | [Portfolio](https://ethan-saline.github.io/Ethan-Saline/) !FIX THIS LINK!
+[LinkedIn](https://www.linkedin.com/in/ethan-saline) | [Email](mailto:e.s.w.saline@gmail.com) | [Portfolio](https://ethan-saline.github.io/Ethan-Saline/) 
 
 ---
 
