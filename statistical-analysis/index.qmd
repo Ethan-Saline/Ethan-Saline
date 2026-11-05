@@ -58,7 +58,22 @@ This is a playful usage of a BF[2] ANOVA using 3 types of paper airplanes and wh
 :::
 
 ::: {.project-card}
-<span class="project-number">04 / TIME SERIES</span>
+<span class="project-number">04 / STATISTICAL THEORY</span>
+
+## Patho-Neural Analysis
+
+A Repeating Values ANOVA project requested by the BYUI Neuro-pathology Research team on data they collected to see if there is a significant decrease in diabetic symptoms from treatment of fulvic acid.
+
+**OVERVIEW**
+
+The analysis concluded that the acis did have an effect and a Cohen's D of 0.6724 but that the results were not significant over a 3 month period, only at a 6 month period as of taking the medicine. This project won 3rd place in a research competition at BYU.
+
+[Explore Project →](patho.qmd)
+:::
+
+
+::: {.project-card}
+<span class="project-number">05 / HOLTS WINTERS</span>
 
 ## Influenza-Like Illness Time Series
 
@@ -71,22 +86,10 @@ NOT ON GIT YET
 [Explore Project →](influenza-like-illness.qmd)
 :::
 
-::: {.project-card}
-<span class="project-number">05 / STATISTICAL THEORY</span>
 
-## Patho-Neural Analysis
-
-NEED TO UPLOAD
-
-**OVERVIEW**
-
-NOT ON GIT YET
-
-[Explore Project →](patho-neural.qmd)
-:::
 
 ::: {.project-card}
-<span class="project-number">06 / ADVANCED MODELING</span>
+<span class="project-number">06 / ARIMA</span>
 
 ## Full ARIMA Model
 

@@ -1,0 +1,634 @@
+---
+title: "Fulvic Acid and the Symptoms of Peripheral Neuropathy"
+subtitle: "Peripheral Neuropathy Presentation Supplement"
+execute:
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+
+# import libraries
+library(tidyverse)
+library(mosaic)
+library(car)
+library(emmeans)
+library(pander)
+library(DT)
+library(scales)
+library(rstatix)
+
+# import data 
+data <- read_csv("../data/neuropath_data.csv") %>%
+  mutate(id = as.integer(as.factor(name))) %>%
+  select(-name)
+```
+
+```{r}
+#| label: data-wrangling
+
+# make data easier to work with
+data_long <- data %>%
+  select(id, visit1, visit2, visit3) %>%
+  drop_na() %>%
+  pivot_longer(
+    cols = visit1:visit3,
+    names_to = "visit",
+    values_to = "value"
+  ) %>%
+  mutate(id = as.factor(id))
+```
+
+# Introduction
+
+**This study investigated whether fulvic acid supplementation could reduce symptoms of peripheral neuropathy**.
+
+Fifty participants referred by endocrinology or pain specialists took 2,000 mg of fulvic acid twice daily for six months. **Only 28 participants actually made it to the 6 month mark**. Researchers assessed neuropathy symptoms through monthly physical examinations using the Michigan Neuropathy Screening Instrument (MNSI). The goal was to determine whether symptom severity changed across visits and whether fulvic acid showed potential as a treatment for peripheral neuropathy.
+
+We used a [repeated-measures ANOVA](https://en.wikipedia.org/wiki/Repeated_measures_design)[^1] to determine whether the average number of neuropathy symptoms changed significantly across the three study visits. Because the same participants were evaluated at each visit **a regular ANOVA would be inappropriate**. However a repeated-measures ANOVA test accounts for the relationship between repeated measurements from the same individuals. We compared the mean symptom counts across visits 1, 2, and 3 to determine whether there was a statistically significant change over time.
+
+# View Data
+
+**Physical Assessment**: Physical assessment data were collected by medical professionals using the Michigan Neuropathy Screening Instrument (MNSI) to evaluate participants' physical signs of peripheral neuropathy. Measurements were recorded at three visits to examine changes in symptom severity over time.
+
+**IMPORTANT NOTE** Much of this data was delivered in handwritten pages which were hard to decipher, meaning many of these values are potentially skewed by my ability to read the researcher's handwriting.
+
+::: {.panel-tabset}
+
+## Graphical Summary
+
+```{r}
+#| label: box-plot
+
+ggplot(data_long, aes(x = visit, y = value)) +
+  geom_boxplot(
+    aes(fill = visit),
+    alpha = 0.7,
+    width = 0.55,
+    outlier.shape = NA,
+    color = "#34495E",
+    linewidth = 0.7,
+    show.legend = FALSE
+  ) +
+  geom_point(
+    aes(color = id),
+    position = position_jitter(width = 0.12, height = 0),
+    alpha = 0.75,
+    size = 2.5
+  ) +
+  scale_fill_manual(
+    values = c(
+      "visit1" = "#A8C5DA",
+      "visit2" = "#6F9EBA",
+      "visit3" = "#356B8C"
+    )
+  ) +
+  scale_color_viridis_d(option = "D", end = 0.85) +
+  labs(
+    title = "Number of Symptoms Observed",
+    subtitle = "There is a clear decrease in symptoms as visits increase",
+    x = "Visit",
+    y = "Number of Symptoms",
+    color = "Patient ID",
+    caption = "Points represent individual patients"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(size = 18, face = "bold", color = "#233142"),
+    plot.subtitle = element_text(size = 11, color = "gray40"),
+    axis.title = element_text(face = "bold", color = "#34495E"),
+    axis.text = element_text(color = "#34495E"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    legend.position = "none",
+    legend.title = element_text(face = "bold"),
+    plot.caption = element_text(color = "gray45", size = 9, hjust = 0),
+    plot.margin = margin(15, 20, 15, 15)
+  )
+```
+
+## Raw Data
+
+```{r}
+#| label: data-table
+
+datatable(
+  data %>% select(id, everything()),
+  caption = "Physical Assessment of Number of Symptoms",
+  rownames = FALSE,
+  options = list(
+    pageLength = 10,
+    lengthMenu = c(10, 20, 40)
+  )
+)
+```
+
+## Numerical Summary
+
+```{r}
+#| label: favstats
+#| results: asis
+
+# fun with favstats
+rbind(
+  visit1 = favstats(filter(data_long, visit == "visit1")$value),
+  visit2 = favstats(filter(data_long, visit == "visit2")$value),
+  visit3 = favstats(filter(data_long, visit == "visit3")$value),
+  Total  = favstats(data_long$value)
+) %>%
+  select(-missing) %>%
+  pander(caption = "Summary Statistics for Physical Assessment of number of symptoms")
+```
+
+:::
+
+# Analysis
+
+::: {.panel-tabset}
+
+## Hypothesis
+
+$$
+H_0: \mu_\text{Visit 1} = \mu_\text{Visit 2} = \mu_\text{Visit 3}
+$$
+
+$$
+H_a: \text{At Least One } \mu \text{ is different}
+$$
+
+**Explained in English**: Our default belief (the null hypothesis shown as $H_0$) is that the treatment does not affect the symptoms and therefore the average number of symptoms does not change across the three visits.
+
+What we are trying to prove (The alternative hypothesis shown as $H_a$) is that the average number of symptoms differs for at least one visit, suggesting that the number of symptoms may change over time.
+
+## Repeated Value ANOVA
+
+### The Model
+
+$$
+\underbrace{Y_{ij}}_{\text{Symptoms for patient }i\text{ at visit }j}
+=
+\underbrace{\mu}_{\text{Overall mean}}
++
+\underbrace{\alpha_j}_{\text{Effect of visit }j}
++
+\underbrace{s_i}_{\text{Patient-specific effect}}
++
+\underbrace{\epsilon_{ij}}_{\text{Random error}}
+$$
+
+**Explanation of Model**
+
+- $Y_{ij}$: The number of symptoms a patient has at a specific visit.
+- $\mu$: The average number of symptoms across the study.
+- $\alpha_j$: How the visit (Visit 1, 2, or 3) affects the symptom count.
+- $s_i$: Differences between patients, since some naturally have more symptoms than others.
+- $\epsilon_{ij}$: Random variation or measurement error that the model cannot explain.
+
+**In simple terms**: The model looks at how symptom counts change over the three visits while accounting for differences between patients and random variation. This helps us determine whether symptom counts changed significantly over time.
+
+### Analysis
+
+```{r}
+#| label: anova
+#| results: asis
+
+myaov <- data_long %>%
+  anova_test(
+    dv = value,
+    wid = id,
+    within = visit
+  )
+
+get_anova_table(myaov) %>% pander(caption = "Results of the repeating value ANOVA")
+```
+
+Here we do see that there is a statistically significant change in average number of symptoms observed as the visits progress. To better understand the result, see Comparisons.
+
+## Comparisons
+
+```{r}
+#| label: pairwise
+#| results: asis
+
+# Pairwise comparisons with Bonferroni adjustment
+pairwise_results <- data_long %>%
+  pairwise_t_test(
+    value ~ visit,
+    paired = TRUE,
+    p.adjust.method = "bonferroni"
+  ) %>%
+  select(-any_of(c(".y.", "n1", "n2")))
+
+# Convert to wide format for paired Cohen's d
+data_wide <- data_long %>%
+  select(id, visit, value) %>%
+  pivot_wider(
+    names_from = visit,
+    values_from = value
+  )
+
+# Calculate paired Cohen's d for each comparison
+cohen_paired <- function(x, y) {
+  differences <- x - y
+  differences <- differences[!is.na(differences)]
+
+  if (length(differences) < 2 || sd(differences) == 0) {
+    return(NA_real_)
+  }
+
+  mean(differences) / sd(differences)
+}
+
+effect_sizes <- tibble(
+  group1 = c("visit1", "visit1", "visit2"),
+  group2 = c("visit2", "visit3", "visit3"),
+  cohens_d = c(
+    cohen_paired(data_wide$visit1, data_wide$visit2),
+    cohen_paired(data_wide$visit1, data_wide$visit3),
+    cohen_paired(data_wide$visit2, data_wide$visit3)
+  )
+)
+
+# Join Cohen's d to the pairwise test results
+final_results <- pairwise_results %>%
+  left_join(effect_sizes, by = c("group1", "group2"))
+
+# Display combined results
+pander(
+  final_results,
+  caption = "Pairwise Comparisons with Bonferroni-Adjusted P-Values and Cohen's d"
+)
+```
+
+Here we see that the only significant difference is between visits 1 and 3. These visits are 3 months apart, meaning the change in symptoms in the first 3 months is **not statistically significant** however the change over 6 months **is statistically significant**.
+
+The paired-samples Cohen's $d_z$ values indicate a small effect between visits 1 and 2 ($d = 0.31$), a medium effect between visits 1 and 3 ($d = 0.67$), and a small-to-medium effect between visits 2 and 3 ($d = 0.47$).
+
+**These results suggest that the change in symptoms was greatest over the full six-month period**, with a moderate standardized effect. Although the change between visits 2 and 3 was not statistically significant after Bonferroni adjustment, its effect size suggests a potentially meaningful change that **may warrant further investigation**.
+
+## Assumptions
+
+```{r}
+#| label: outliers
+#| results: asis
+
+# Check outliers at each visit
+data_long %>%
+  group_by(visit) %>%
+  identify_outliers(value) %>%
+  pander(caption = "List of outliers")
+```
+
+```{r}
+#| label: normality
+#| results: asis
+
+# Check normality of pairwise difference scores
+data_wide <- data_long %>%
+  select(id, visit, value) %>%
+  pivot_wider(names_from = visit, values_from = value)
+
+shapiro_results <- tibble(
+  comparison = c("Visit 1 - Visit 2", "Visit 1 - Visit 3", "Visit 2 - Visit 3"),
+  test = list(
+    shapiro.test(data_wide$visit1 - data_wide$visit2),
+    shapiro.test(data_wide$visit1 - data_wide$visit3),
+    shapiro.test(data_wide$visit2 - data_wide$visit3)
+  )
+) %>%
+  mutate(
+    statistic = sapply(test, \(x) unname(x$statistic)),
+    p.value = sapply(test, \(x) x$p.value),
+    method = "Shapiro-Wilk normality test"
+  ) %>%
+  select(
+    comparison, statistic, p.value, method
+  )
+
+pander(
+  shapiro_results,
+  caption = "Shapiro-Wilk Test Results for Pairwise Visit Differences"
+)
+```
+
+The Shapiro–Wilk tests were non-significant for all pairwise differences ($p > .05$), indicating **no evidence of a violation of normality**. Two potential outliers were identified at visit 3, but **neither was classified as extreme** and should be investigated rather than automatically removed.
+
+```{r}
+#| label: sphericity
+#| results: asis
+
+# Mauchly's test of sphericity
+myaov$`Mauchly's Test for Sphericity` %>%
+  pander(caption = "Mauchly's Test For Sphericity")
+```
+
+Mauchly's test was non-significant ($W = 0.957, p = .567$), indicating that **the assumption of sphericity was met**. Therefore, no sphericity correction was necessary for the repeated-measures ANOVA.
+
+:::
+
+# Other Cool Visualizations
+
+::: {.panel-tabset}
+
+## Trend Lines
+
+```{r}
+#| label: trendline
+
+trend_data <- data_long %>%
+  mutate(
+    visit = factor(visit, levels = c("visit1", "visit2", "visit3")),
+    visit_num = as.numeric(visit)
+  )
+
+ggplot(trend_data, aes(x = visit_num, y = value, group = id)) +
+  geom_line(
+    color = "#91A4B5",
+    alpha = 0.35,
+    linewidth = 0.7
+  ) +
+  geom_point(
+    color = "#356B8C",
+    alpha = 0.65,
+    size = 2
+  ) +
+  geom_smooth(
+    aes(group = 1),
+    method = "lm",
+    formula = y ~ x,
+    se = TRUE,
+    color = "#C05A47",
+    fill = "#C05A47",
+    alpha = 0.15,
+    linewidth = 1.2
+  ) +
+  scale_x_continuous(
+    breaks = 1:3,
+    labels = c("Visit 1", "Visit 2", "Visit 3")
+  ) +
+  labs(
+    title = "Neuropathy Symptoms Across Study Visits",
+    subtitle = "Individual patient observations with the overall linear trend",
+    x = "Study Visit",
+    y = "Number of Symptoms",
+    caption = "The fitted line summarizes the overall linear trend; the shaded band represents its 95% confidence interval."
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(size = 17, face = "bold", color = "#233142"),
+    plot.subtitle = element_text(color = "gray40"),
+    axis.title = element_text(face = "bold", color = "#34495E"),
+    axis.text = element_text(color = "#34495E"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    plot.caption = element_text(size = 9, color = "gray40", hjust = 0)
+  )
+```
+
+## Trajectories
+
+```{r}
+#| label: trajectories
+
+ggplot(
+  data_long,
+  aes(x = visit, y = value, group = id)
+) +
+  geom_line(
+    color = "#91A4B5",
+    linewidth = 0.8,
+    alpha = 0.5
+  ) +
+  geom_point(
+    color = "#356B8C",
+    size = 2.3,
+    alpha = 0.75
+  ) +
+  stat_summary(
+    aes(group = 1),
+    fun = mean,
+    geom = "line",
+    color = "#C05A47",
+    linewidth = 1.5
+  ) +
+  stat_summary(
+    aes(group = 1),
+    fun = mean,
+    geom = "point",
+    color = "#C05A47",
+    size = 4
+  ) +
+  scale_x_discrete(
+    labels = c(
+      visit1 = "Visit 1",
+      visit2 = "Visit 2",
+      visit3 = "Visit 3"
+    )
+  ) +
+  labs(
+    title = "Individual Patient Symptom Trajectories",
+    subtitle = "Individual changes compared with the mean at each visit",
+    x = "Study Visit",
+    y = "Number of Symptoms",
+    caption = "Gray lines represent individual patients; red markers and lines represent visit-specific means."
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(size = 17, face = "bold", color = "#233142"),
+    plot.subtitle = element_text(color = "gray40"),
+    axis.title = element_text(face = "bold", color = "#34495E"),
+    axis.text = element_text(color = "#34495E"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    plot.caption = element_text(size = 9, color = "gray40", hjust = 0)
+  )
+```
+
+## Change in Mean
+
+```{r}
+#| label: change-in-mean
+
+physical_summary <- data_long %>%
+  group_by(visit) %>%
+  summarise(
+    n = sum(!is.na(value)),
+    mean = mean(value, na.rm = TRUE),
+    sd = sd(value, na.rm = TRUE),
+    se = sd / sqrt(n),
+    t_critical = qt(0.975, df = n - 1),
+    lower = mean - t_critical * se,
+    upper = mean + t_critical * se,
+    .groups = "drop"
+  ) %>%
+  mutate(
+    visit = factor(visit, levels = c("visit1", "visit2", "visit3"))
+  )
+
+ggplot(physical_summary, aes(x = visit, y = mean, group = 1)) +
+  geom_line(
+    color = "#356B8C",
+    linewidth = 1.2
+  ) +
+  geom_errorbar(
+    aes(ymin = lower, ymax = upper),
+    width = 0.10,
+    color = "#356B8C",
+    linewidth = 0.8
+  ) +
+  geom_point(
+    color = "#C05A47",
+    size = 4
+  ) +
+  scale_x_discrete(
+    labels = c(
+      visit1 = "Visit 1",
+      visit2 = "Visit 2",
+      visit3 = "Visit 3"
+    )
+  ) +
+  labs(
+    title = "Mean Neuropathy Symptoms Across Visits",
+    subtitle = "Average symptom count with 95% confidence intervals",
+    x = "Study Visit",
+    y = "Mean Number of Symptoms",
+    caption = "Error bars represent separate 95% confidence intervals for the visit-specific means."
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(size = 17, face = "bold", color = "#233142"),
+    plot.subtitle = element_text(color = "gray40"),
+    axis.title = element_text(face = "bold", color = "#34495E"),
+    axis.text = element_text(color = "#34495E"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    plot.caption = element_text(size = 9, color = "gray40", hjust = 0)
+  )
+```
+
+## Change from Base
+
+```{r}
+#| label: change-from-base
+
+physical_change <- data_long %>%
+  mutate(
+    visit = factor(visit, levels = c("visit1", "visit2", "visit3"))
+  ) %>%
+  group_by(id) %>%
+  mutate(
+    baseline = value[visit == "visit1"][1],
+    change = value - baseline
+  ) %>%
+  ungroup() %>%
+  filter(!is.na(baseline), !is.na(change))
+
+ggplot(
+  physical_change,
+  aes(x = visit, y = change, group = id)
+) +
+  geom_hline(
+    yintercept = 0,
+    linetype = "dashed",
+    color = "gray45",
+    linewidth = 0.8
+  ) +
+  geom_line(
+    color = "#91A4B5",
+    alpha = 0.5,
+    linewidth = 0.8
+  ) +
+  geom_point(
+    color = "#356B8C",
+    alpha = 0.7,
+    size = 2.2
+  ) +
+  stat_summary(
+    aes(group = 1),
+    fun = mean,
+    geom = "line",
+    color = "#C05A47",
+    linewidth = 1.3
+  ) +
+  stat_summary(
+    aes(group = 1),
+    fun = mean,
+    geom = "point",
+    color = "#C05A47",
+    size = 3.5
+  ) +
+  scale_x_discrete(
+    labels = c(
+      visit1 = "Visit 1",
+      visit2 = "Visit 2",
+      visit3 = "Visit 3"
+    )
+  ) +
+  labs(
+    title = "Change in Symptoms Relative to Baseline",
+    subtitle = "Within-patient change from Visit 1",
+    x = "Study Visit",
+    y = "Change in Symptom Count",
+    caption = "Negative values indicate fewer symptoms; positive values indicate more symptoms. Red markers show mean change."
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(size = 17, face = "bold", color = "#233142"),
+    plot.subtitle = element_text(color = "gray40"),
+    axis.title = element_text(face = "bold", color = "#34495E"),
+    axis.text = element_text(color = "#34495E"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    plot.caption = element_text(size = 9, color = "gray40", hjust = 0)
+  )
+```
+
+## Heatmap
+
+```{r}
+#| label: heatmap
+
+patient_order <- data_long %>%
+  filter(visit == "visit1") %>%
+  arrange(value, id) %>%
+  pull(id)
+
+heatmap_data <- data_long %>%
+  mutate(
+    visit = factor(
+      visit,
+      levels = c("visit1", "visit2", "visit3"),
+      labels = c("Visit 1", "Visit 2", "Visit 3")
+    ),
+    patient = factor(id, levels = patient_order)
+  )
+
+ggplot(heatmap_data, aes(x = visit, y = patient, fill = value)) +
+  geom_tile(
+    color = "white",
+    linewidth = 0.35
+  ) +
+  scale_fill_viridis_c(
+    option = "C",
+    name = "Symptom\ncount"
+  ) +
+  labs(
+    title = "Patient-Level Neuropathy Symptom Patterns",
+    subtitle = "Symptom counts across visits, ordered by baseline severity",
+    x = "Study Visit",
+    y = "Patient ID"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(size = 17, face = "bold", color = "#233142"),
+    plot.subtitle = element_text(color = "gray40"),
+    axis.title = element_text(face = "bold", color = "#34495E"),
+    axis.text.y = element_text(size = 8),
+    panel.grid = element_blank()
+  )
+```
+
+:::
+
+[^1]: For more info on Repeated measures ANOVA see [this link](https://statsandr.com/blog/repeated-measures-anova-in-r/) and for a BYUI centered version [this link](https://byuistats.github.io/Math326_Quarto4/split_plot.html)

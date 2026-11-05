@@ -39,7 +39,7 @@
     "href": "statistical-analysis/index.html#patho-neural-analysis",
     "title": "Ethan Saline's Portfolio",
     "section": "Patho-Neural Analysis",
-    "text": "Patho-Neural Analysis\nNEED TO UPLOAD\nOVERVIEW\nNOT ON GIT YET\nExplore Project →"
+    "text": "Patho-Neural Analysis\nA Repeating Values ANOVA project requested by the BYUI Neuro-pathology Research team on data they collected to see if there is a significant decrease in diabetic symptoms from treatment of fulvic acid.\nOVERVIEW\nThe analysis concluded that the acis did have an effect and a Cohen’s D of 0.6724 but that the results were not significant over a 3 month period, only at a 6 month period as of taking the medicine. This project won 3rd place in a research competition at BYU.\nExplore Project →"
   },
   {
     "objectID": "statistical-analysis/index.html#full-arima-model",
@@ -257,5 +257,19 @@
     "title": "Ethan Saline's Portfolio",
     "section": "House Price Prediction",
     "text": "House Price Prediction\nA predictive modeling project uses a Two Lines Linear Regression to predict housing prices. The goal is complete intelligabilty as opposed to simply attempting to get good predictions.\nOVERVIEW\nThis model is based on house square footage but then splits into two lines based on whether that neighborhood is rich or not. This is acheived through a linear regression model using a binary variable as a “switch”.\nExplore Project →"
+  },
+  {
+    "objectID": "statistical-analysis/patho.html",
+    "href": "statistical-analysis/patho.html",
+    "title": "Fulvic Acid and the Symptoms of Peripheral Neuropathy",
+    "section": "",
+    "text": "Code\n# import libraries\nlibrary(tidyverse)\nlibrary(mosaic)\nlibrary(car)\nlibrary(emmeans)\nlibrary(pander)\nlibrary(DT)\nlibrary(scales)\nlibrary(rstatix)\n\n# import data \ndata &lt;- read_csv(\"../data/neuropath_data.csv\") %&gt;%\n  mutate(id = as.integer(as.factor(name))) %&gt;%\n  select(-name)\nCode\n# make data easier to work with\ndata_long &lt;- data %&gt;%\n  select(id, visit1, visit2, visit3) %&gt;%\n  drop_na() %&gt;%\n  pivot_longer(\n    cols = visit1:visit3,\n    names_to = \"visit\",\n    values_to = \"value\"\n  ) %&gt;%\n  mutate(id = as.factor(id))"
+  },
+  {
+    "objectID": "statistical-analysis/patho.html#footnotes",
+    "href": "statistical-analysis/patho.html#footnotes",
+    "title": "Fulvic Acid and the Symptoms of Peripheral Neuropathy",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nFor more info on Repeated measures ANOVA see this link and for a BYUI centered version this link↩︎"
   }
 ]
