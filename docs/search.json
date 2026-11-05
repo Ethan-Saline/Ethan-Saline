@@ -2,23 +2,121 @@
   {
     "objectID": "statistical-analysis/index.html",
     "href": "statistical-analysis/index.html",
-    "title": "Statistical Analysis",
+    "title": "Ethan Saline's Portfolio",
     "section": "",
-    "text": "Heart Mortality Housing Perdiction ANOVA Plane Influenza-Like Illness Time Series Patho-Nueral stuff\nFull ARIMA MODEl"
+    "text": "STATISTICAL ANALYSIS\n\n\n\nA collection of statistical investigations, predictive models, and analytical projects. Each project applies statistical methods to real-world questions, combining data exploration, model development, and interpretation."
   },
   {
-    "objectID": "models/index.html",
-    "href": "models/index.html",
-    "title": "Models & Theory",
-    "section": "",
-    "text": "Linear Regression\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nLogistic Regression\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nHolts Winters\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nARIMA\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nDecision Tree\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nRandom Forest\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nXGBoost\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nNeural Networks\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nCNNs\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nRNNs\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nTransformers\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nAgents\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text."
+    "objectID": "statistical-analysis/index.html#heart-attack-mortality",
+    "href": "statistical-analysis/index.html#heart-attack-mortality",
+    "title": "Ethan Saline's Portfolio",
+    "section": "Heart Attack Mortality",
+    "text": "Heart Attack Mortality\nA Logistic Regression Model which uses minimal variables in order to be graphable in 3D as well as completely explanable.\nOVERVIEW\nThis model uses Heart Ejection Fraction, Serum Creatinine Level, and whether the patient was over or under 80 years old to predict the probability of mortality while in treatment for a heart attack. The model has 80.3% correct classification using only these three variables.\nExplore Project →"
   },
   {
-    "objectID": "cheat-sheets/index.html",
-    "href": "cheat-sheets/index.html",
-    "title": "Cheat Sheets",
+    "objectID": "statistical-analysis/index.html#housing-prediction",
+    "href": "statistical-analysis/index.html#housing-prediction",
+    "title": "Ethan Saline's Portfolio",
+    "section": "Housing Prediction",
+    "text": "Housing Prediction\nA predictive modeling project uses a Two Lines Linear Regression to predict housing prices. The goal is complete intelligabilty as opposed to simply attempting to get good predictions.\nOVERVIEW\nThis model is based on house square footage but then splits into two lines based on whether that neighborhood is rich or not. This is acheived through a linear regression model using a binary variable as a “switch”.\nExplore Project →"
+  },
+  {
+    "objectID": "statistical-analysis/index.html#anova-plane",
+    "href": "statistical-analysis/index.html#anova-plane",
+    "title": "Ethan Saline's Portfolio",
+    "section": "ANOVA Plane",
+    "text": "ANOVA Plane\nAn application of Analysis of Variance (ANOVA) to investigate differences between groups and evaluate statistical significance.\nOVERVIEW\nThis is a playful usage of a BF[2] ANOVA using 3 types of paper airplanes and whether I threw the plane or if my wife threw the plane to see if there are any significant changes in distance flown.\nExplore Project →"
+  },
+  {
+    "objectID": "statistical-analysis/index.html#influenza-like-illness-time-series",
+    "href": "statistical-analysis/index.html#influenza-like-illness-time-series",
+    "title": "Ethan Saline's Portfolio",
+    "section": "Influenza-Like Illness Time Series",
+    "text": "Influenza-Like Illness Time Series\nNEED TO UPLOAD\nOVERVIEW\nNOT ON GIT YET\nExplore Project →"
+  },
+  {
+    "objectID": "statistical-analysis/index.html#patho-neural-analysis",
+    "href": "statistical-analysis/index.html#patho-neural-analysis",
+    "title": "Ethan Saline's Portfolio",
+    "section": "Patho-Neural Analysis",
+    "text": "Patho-Neural Analysis\nNEED TO UPLOAD\nOVERVIEW\nNOT ON GIT YET\nExplore Project →"
+  },
+  {
+    "objectID": "statistical-analysis/index.html#full-arima-model",
+    "href": "statistical-analysis/index.html#full-arima-model",
+    "title": "Ethan Saline's Portfolio",
+    "section": "Full ARIMA Model",
+    "text": "Full ARIMA Model\nNEED TO UPLOAD\nOVERVIEW\nNOT ON GIT YET\nExplore Project →"
+  },
+  {
+    "objectID": "statistical-analysis/heart-mortality.html",
+    "href": "statistical-analysis/heart-mortality.html",
+    "title": "Heart Attack Mortality Logistic Regression",
     "section": "",
-    "text": "Tidyverse\nGGplot\nPandas\nPolars\nPySpark"
+    "text": "Code\nlibrary(tidyverse)\nlibrary(readr)\nlibrary(utils)\nlibrary(Applr)\nlibrary(plotly)\nlibrary(RColorBrewer)\nlibrary(pander)\nlibrary(mosaic)\n\n# Consistent look for every static plot\ntheme_set(theme_minimal(base_size = 13) +\n            theme(plot.title = element_text(face = \"bold\"),\n                  panel.grid.minor = element_blank()))\n\npanderOptions(\"table.split.table\", Inf)\npanderOptions(\"round\", 4)\nCode\n# Altered an Applr function to graph two line logistic models \nscatter_3d_logistic_two_line &lt;- function(model, n = 50, colors = c(\"red\",\"blue\")) {\n  if (!inherits(model, \"glm\")) stop(\"Model must be a glm (logistic) model\")\n  \n  vars &lt;- all.vars(formula(model))\n  predictors &lt;- vars[-1]  # exclude outcome\n  y_name &lt;- vars[1]\n  \n  if (length(predictors) &gt; 3) stop(\"Model has too many predictors. Only 2 continuous + 1 factor allowed\")\n  \n  # Detect factor variable among predictors using model$xlevels\n  factor_var &lt;- NULL\n  continuous_vars &lt;- c()\n  for (v in predictors) {\n    if (!is.null(model$xlevels[[v]])) {\n      factor_var &lt;- v\n    } else {\n      continuous_vars &lt;- c(continuous_vars, v)\n    }\n  }\n  \n  if (length(continuous_vars) != 2) stop(\"Need exactly 2 continuous predictors for 3D plot\")\n  x_name &lt;- continuous_vars[1]\n  y2_name &lt;- continuous_vars[2]\n  \n  # Scatter points\n  df_plot &lt;- model$model[, c(y_name, x_name, y2_name)]\n  if (!is.null(factor_var) && factor_var %in% names(model$model)) {\n    df_plot[[factor_var]] &lt;- model$model[[factor_var]]  # keep factor\n    levels_factor &lt;- levels(model$model[[factor_var]])\n    if (is.null(colors)) colors &lt;- brewer.pal(length(levels_factor), \"Set1\")\n  }\n  \n  # Rename for plotting\n  df_plot2 &lt;- df_plot %&gt;%\n    rename(X = !!sym(x_name), Y = !!sym(y2_name), Z = !!sym(y_name))\n  \n  if (!is.null(factor_var) && factor_var %in% names(df_plot2)) {\n    df_plot2[[factor_var]] &lt;- df_plot[[factor_var]]\n  }\n  \n  axisx &lt;- seq(min(df_plot2$X), max(df_plot2$X), length.out = n)\n  axisy &lt;- seq(min(df_plot2$Y), max(df_plot2$Y), length.out = n)\n  \n  # Scatter points\n  p &lt;- plot_ly(data = df_plot2, x = ~X, y = ~Y, z = ~Z,\n               type = 'scatter3d', mode = 'markers', color = I(\"black\"))\n  \n  # Add surface(s)\n  if (!is.null(factor_var) && factor_var %in% names(df_plot2)) {\n    for (i in seq_along(levels_factor)) {\n      level &lt;- levels_factor[i]\n      \n      # Surface grid with original variable names\n      surface_df &lt;- setNames(expand.grid(axisx, axisy), c(x_name, y2_name))\n      surface_df[[factor_var]] &lt;- factor(level, levels = model$xlevels[[factor_var]])\n      \n      # Predict probabilities\n      surface_df$Z &lt;- predict(model, newdata = surface_df, type = \"response\")\n      \n      # Convert to matrix for surface\n      Z_matrix &lt;- matrix(surface_df$Z, nrow = length(axisy), ncol = length(axisx), byrow = TRUE)\n      \n      # Add surface with unique color\n      p &lt;- p %&gt;% add_surface(x = axisx, y = axisy, z = Z_matrix,\n                             opacity = 0.6,\n                             showscale = FALSE,\n                             name = paste(factor_var, \"=\", level),\n                             surfacecolor = matrix(rep(i, length(axisx)*length(axisy)), nrow=length(axisy)),\n                             colorscale = list(c(0,1), c(colors[i], colors[i])))\n    }\n  } else {\n    # Single surface if no factor\n    surface_df &lt;- setNames(expand.grid(axisx, axisy), c(x_name, y2_name))\n    surface_df$Z &lt;- predict(model, newdata = surface_df, type = \"response\")\n    Z_matrix &lt;- matrix(surface_df$Z, nrow = length(axisy), ncol = length(axisx), byrow = TRUE)\n    \n    p &lt;- p %&gt;% add_surface(x = axisx, y = axisy, z = Z_matrix, opacity = 0.6)\n  }\n  \n  # Axis titles\n  p &lt;- layout(p, scene = list(\n    xaxis = list(title = x_name),\n    yaxis = list(title = y2_name),\n    zaxis = list(title = y_name)\n  ))\n  \n  p\n}"
+  },
+  {
+    "objectID": "statistical-analysis/heart-mortality.html#predictors-used",
+    "href": "statistical-analysis/heart-mortality.html#predictors-used",
+    "title": "Heart Attack Mortality Logistic Regression",
+    "section": "Predictors Used",
+    "text": "Predictors Used\n\nAge\nHeart failure mortality rises markedly with age. Older patients typically have less physiological reserve and a heavier burden of comorbid conditions, both of which worsen prognosis.\n\nReduced cardiovascular reserve\nHigher prevalence of hypertension, diabetes, and chronic kidney disease\nLower tolerance for aggressive or advanced therapies\n\n\n\nEjection Fraction\nEjection fraction (EF) is the percentage of blood ejected from the left ventricle with each contraction. A normal EF is approximately 55–70%. A low EF reflects systolic dysfunction and is strongly associated with:\n\nIncreased hospitalization rates\nHigher risk of ventricular arrhythmias\nElevated mortality risk\n\n\n\nSerum Creatinine\nSerum creatinine reflects kidney function and is a key prognostic marker in heart failure. Elevated creatinine often signals cardiorenal syndrome, in which reduced cardiac output and elevated venous pressure impair renal perfusion and filtration. Renal dysfunction in heart failure is driven by:\n\nLow forward flow, which reduces renal blood supply\nChronic venous congestion, which increases renal interstitial pressure\nNeurohormonal activation (RAAS and sympathetic systems), which worsens both cardiac and renal function"
+  },
+  {
+    "objectID": "statistical-analysis/heart-mortality.html#source-and-preparation",
+    "href": "statistical-analysis/heart-mortality.html#source-and-preparation",
+    "title": "Heart Attack Mortality Logistic Regression",
+    "section": "Source and Preparation",
+    "text": "Source and Preparation\nThe data come from the UCI Heart Failure Clinical Records dataset, which contains clinical information on 299 patients with heart failure. It includes demographic variables, comorbidities, laboratory measurements, cardiac function indicators, and a binary outcome indicating mortality during follow-up.\n\n\nCode\n# Save as a temp file\ntemp_zip &lt;- tempfile(fileext = \".zip\")\n\nurl &lt;- \"https://archive.ics.uci.edu/static/public/519/heart+failure+clinical+records.zip\"\ndownload.file(url, destfile = temp_zip, mode = \"wb\", quiet = TRUE)\n\nzip_contents &lt;- unzip(temp_zip, list = TRUE)\n\ntemp_csv &lt;- tempfile(fileext = \".csv\")\nunzip(temp_zip, files = \"heart_failure_clinical_records_dataset.csv\", exdir = dirname(temp_csv))\n\n# Read from temp\ndf &lt;- read_csv(file.path(dirname(temp_csv), \"heart_failure_clinical_records_dataset.csv\"))\n\n\n\n\nCode\n# Create new variable\ndf$eighty_years_old &lt;- factor(ifelse(df$age &gt;= 80, 1, 0),\n                              levels = c(0, 1),\n                              labels = c(\"Under80\", \"80plus\"))\n\n\n\n\n\n\n\n\nA note on the time variable\n\n\n\nThe strongest single predictor in the dataset was time, the length of the follow-up period. Using it would be “cheating”: patients who died stopped being observed and therefore have short follow-up times, while survivors were observed for the entire study. We discarded this variable."
+  },
+  {
+    "objectID": "statistical-analysis/heart-mortality.html#exploratory-data-analysis",
+    "href": "statistical-analysis/heart-mortality.html#exploratory-data-analysis",
+    "title": "Heart Attack Mortality Logistic Regression",
+    "section": "Exploratory Data Analysis",
+    "text": "Exploratory Data Analysis\nSummary statistics and distributions for each continuous predictor are shown below, split by mortality outcome.\n\nSerum Creatinine (mg/dL)Ejection Fraction (%)Age\n\n\n\n\nCode\nfavstats(df$serum_creatinine ~ df$DEATH_EVENT) %&gt;% pander()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndf$DEATH_EVENT\nmin\nQ1\nmedian\nQ3\nmax\nmean\nsd\nn\nmissing\n\n\n\n\n0\n0.5\n0.9\n1\n1.2\n6.1\n1.185\n0.6541\n203\n0\n\n\n1\n0.6\n1.075\n1.3\n1.9\n9.4\n1.836\n1.469\n96\n0\n\n\n\n\n\nCode\nggplot(df, aes(x = serum_creatinine)) +\n  geom_histogram(bins = 30, fill = \"#2780e3\", color = \"white\") +\n  labs(\n    title = \"Distribution of Serum Creatinine\",\n    x = \"Serum Creatinine (mg/dL)\",\n    y = \"Count\"\n  )\n\n\n\n\n\n\n\n\n\nCode\nggplot(df, aes(x = as.factor(DEATH_EVENT), y = serum_creatinine,\n               fill = as.factor(DEATH_EVENT))) +\n  geom_boxplot(show.legend = FALSE, alpha = 0.8) +\n  scale_fill_manual(values = c(\"#2780e3\", \"#d9534f\")) +\n  scale_x_discrete(labels = c(\"Alive\", \"Died\")) +\n  labs(\n    title = \"Serum Creatinine by Mortality Outcome\",\n    x = \"Outcome\",\n    y = \"Serum Creatinine (mg/dL)\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nfavstats(df$ejection_fraction ~ df$DEATH_EVENT) %&gt;% pander()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndf$DEATH_EVENT\nmin\nQ1\nmedian\nQ3\nmax\nmean\nsd\nn\nmissing\n\n\n\n\n0\n17\n35\n38\n45\n80\n40.27\n10.86\n203\n0\n\n\n1\n14\n25\n30\n38\n70\n33.47\n12.53\n96\n0\n\n\n\n\n\nCode\nggplot(df, aes(x = ejection_fraction)) +\n  geom_histogram(bins = 30, fill = \"#2780e3\", color = \"white\") +\n  labs(\n    title = \"Distribution of Ejection Fraction\",\n    x = \"Ejection Fraction (%)\",\n    y = \"Count\"\n  )\n\n\n\n\n\n\n\n\n\nCode\nggplot(df, aes(x = as.factor(DEATH_EVENT), y = ejection_fraction,\n               fill = as.factor(DEATH_EVENT))) +\n  geom_boxplot(show.legend = FALSE, alpha = 0.8) +\n  scale_fill_manual(values = c(\"#2780e3\", \"#d9534f\")) +\n  scale_x_discrete(labels = c(\"Alive\", \"Died\")) +\n  labs(\n    title = \"Ejection Fraction by Mortality Outcome\",\n    x = \"Outcome\",\n    y = \"Ejection Fraction (%)\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nfavstats(df$age ~ df$DEATH_EVENT) %&gt;% pander()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndf$DEATH_EVENT\nmin\nQ1\nmedian\nQ3\nmax\nmean\nsd\nn\nmissing\n\n\n\n\n0\n40\n50\n60\n65\n90\n58.76\n10.64\n203\n0\n\n\n1\n42\n55\n65\n75\n95\n65.22\n13.21\n96\n0\n\n\n\n\n\nCode\nggplot(df, aes(x = age)) +\n  geom_histogram(bins = 30, fill = \"#2780e3\", color = \"white\") +\n  labs(\n    title = \"Distribution of Age\",\n    x = \"Age (years)\",\n    y = \"Count\"\n  )\n\n\n\n\n\n\n\n\n\nCode\nggplot(df, aes(x = as.factor(DEATH_EVENT), y = age,\n               fill = as.factor(DEATH_EVENT))) +\n  geom_boxplot(show.legend = FALSE, alpha = 0.8) +\n  scale_fill_manual(values = c(\"#2780e3\", \"#d9534f\")) +\n  scale_x_discrete(labels = c(\"Alive\", \"Died\")) +\n  labs(\n    title = \"Age by Mortality Outcome\",\n    x = \"Outcome\",\n    y = \"Age (years)\"\n  )"
+  },
+  {
+    "objectID": "statistical-analysis/heart-mortality.html#mathematical-model",
+    "href": "statistical-analysis/heart-mortality.html#mathematical-model",
+    "title": "Heart Attack Mortality Logistic Regression",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model\nLet \\(p_i\\) be the probability that patient \\(i\\) dies during follow-up. The model is\n\\[\n\\log\\!\\left(\\frac{p_i}{1 - p_i}\\right) = \\beta_0 + \\beta_1\\,\\text{EF}_i + \\beta_2\\,\\text{Creatinine}_i + \\beta_3\\,\\text{Age80Plus}_i\n\\]\nor, equivalently, in terms of probability,\n\\[\nP(\\text{Mortality}_i = 1 \\mid \\cdot) =\n\\frac{e^{\\,\\beta_0 + \\beta_1\\,\\text{EF}_i + \\beta_2\\,\\text{Creatinine}_i + \\beta_3\\,\\text{Age80Plus}_i}}\n     {1 + e^{\\,\\beta_0 + \\beta_1\\,\\text{EF}_i + \\beta_2\\,\\text{Creatinine}_i + \\beta_3\\,\\text{Age80Plus}_i}}\n\\]\nwhere \\(\\text{Age80Plus}_i = 1\\) if patient \\(i\\) is 80 or older and \\(0\\) otherwise."
+  },
+  {
+    "objectID": "statistical-analysis/heart-mortality.html#fitting-the-model",
+    "href": "statistical-analysis/heart-mortality.html#fitting-the-model",
+    "title": "Heart Attack Mortality Logistic Regression",
+    "section": "Fitting the Model",
+    "text": "Fitting the Model\nWe split the data into a 75% training set and a 25% test set, fit the model on the training data, and evaluate it on the test data.\n\n\nCode\n# Rename so that makes sense on plot\ndf &lt;- df %&gt;%\n  rename(\n    `Mortality (Death Event)` = DEATH_EVENT,\n    `Ejection Fraction (%)` = ejection_fraction,\n    `Serum Creatinine (mg/dL)` = serum_creatinine\n  )\n\n\n\n\nCode\nset.seed(5)\n\nn &lt;- nrow(df)\n\nkeep &lt;- sample(1:n, size = round(0.75 * n))\nmytrain &lt;- df[keep, ]\nmytest &lt;- df[-keep, ]\n\n\n# My model is here\nmy_glm &lt;- glm(`Mortality (Death Event)` ~ `Ejection Fraction (%)` + `Serum Creatinine (mg/dL)` + eighty_years_old,\n              data = mytrain, family = \"binomial\")\n\nsummary(my_glm) %&gt;% pander()\n\n\n\n\n\n\n\n\n\n\n\n\n \nEstimate\nStd. Error\nz value\nPr(&gt;|z|)\n\n\n\n\n(Intercept)\n0.3541\n0.7389\n0.4793\n0.6318\n\n\nEjection Fraction (%)\n-0.0818\n0.0189\n-4.326\n0\n\n\nSerum Creatinine (mg/dL)\n1.128\n0.2685\n4.202\n0\n\n\neighty_years_old80plus\n2.119\n0.5472\n3.873\n1e-04\n\n\n\n(Dispersion parameter for binomial family taken to be 1 )\n\n\n\n\n\n\n\nNull deviance:\n281.3 on 223 degrees of freedom\n\n\nResidual deviance:\n210.4 on 220 degrees of freedom\n\n\n\n\n\nCode\n#cat(\"\\nModel AIC:\", AIC(my_glm), \"\\n\")"
+  },
+  {
+    "objectID": "statistical-analysis/heart-mortality.html#interpretation",
+    "href": "statistical-analysis/heart-mortality.html#interpretation",
+    "title": "Heart Attack Mortality Logistic Regression",
+    "section": "Interpretation",
+    "text": "Interpretation\nCoefficients are on the log-odds scale; exponentiating gives odds ratios.\n\nEjection fraction. Each 1% increase in ejection fraction changes the log-odds of mortality by \\(-0.06485\\). The odds ratio is \\(e^{-0.06485} = 0.94\\), so the odds of mortality decrease by about 6% for each additional 1% of blood ejected per contraction.\nSerum creatinine. Each 1 mg/dL increase changes the log-odds of mortality by \\(0.6664\\). The odds ratio is \\(e^{0.6664} = 1.95\\), so the odds of mortality increase by about 95% for each additional 1 mg/dL of serum creatinine.\nAge ≥ 80. Being 80 or older increases the log-odds of mortality by \\(1.625\\). The odds ratio is \\(e^{1.625} = 5.08\\), so the odds of mortality increase by about 408% for patients 80 or older."
+  },
+  {
+    "objectID": "statistical-analysis/heart-mortality.html#d-visualization-of-the-model",
+    "href": "statistical-analysis/heart-mortality.html#d-visualization-of-the-model",
+    "title": "Heart Attack Mortality Logistic Regression",
+    "section": "3D Visualization of the Model",
+    "text": "3D Visualization of the Model\nThe plot shows predicted mortality probability as a function of ejection fraction and serum creatinine. The red plane is for patients under 80 and the blue plane is for patients 80 or older; the gap between them shows the substantially higher predicted risk in the older group. Black points are observed outcomes in the training data.\n\n\nCode\nscatter_3d_logistic_two_line(my_glm)"
+  },
+  {
+    "objectID": "statistical-analysis/heart-mortality.html#limitations",
+    "href": "statistical-analysis/heart-mortality.html#limitations",
+    "title": "Heart Attack Mortality Logistic Regression",
+    "section": "Limitations",
+    "text": "Limitations\n\nThe model was evaluated on a single random train/test split of a small dataset (299 patients), so accuracy estimates carry uncertainty.\nDichotomizing age at 80 discards information; a continuous age term may fit better.\nOdds ratios describe association, not causation."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Chest X Ray Covid CNN Assembly Line YOLO Recommender System\nCovid Transcriptomics"
   },
   {
     "objectID": "index.html",
@@ -70,10 +168,80 @@
     "text": "Leadership & Service\n\nFull-time Volunteer Missionary, São Paulo Interlagos Mission, Brazil\nOct 2021 – Oct 2023\n\nServed as Zone Leader, coordinating missionary teams, running weekly planning meetings, and setting goals with mission leadership.\nManaged finances as Financial Secretary for a mission of 80+ people, including budgets, reimbursements, and records.\nTrained new missionaries one-on-one, and led all meetings and training entirely in Portuguese.\n\n\nOpen to data science and machine learning opportunities. Feel free to reach out on LinkedIn."
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
+    "objectID": "cheat-sheets/index.html",
+    "href": "cheat-sheets/index.html",
+    "title": "Cheat Sheets",
     "section": "",
-    "text": "Chest X Ray Covid CNN Assembly Line YOLO Recommender System\nCovid Transcriptomics"
+    "text": "Tidyverse\nGGplot\nPandas\nPolars\nPySpark\nSQL"
+  },
+  {
+    "objectID": "models/index.html",
+    "href": "models/index.html",
+    "title": "Models & Theory",
+    "section": "",
+    "text": "Linear Regression\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nLogistic Regression\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nHolts Winters\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nARIMA\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nDecision Tree\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nRandom Forest\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nXGBoost\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nNeural Networks\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nCNNs\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nRNNs\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nTransformers\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text.\n\n\n\n\n\n\n\n\nAgents\n\nOverviewMathematical ModelApplication\n\n\nOverview text.\n\n\nMath text.\n\n\n\nPythonR\n\n\nPython text.\n\n\nR text."
+  },
+  {
+    "objectID": "statistical-analysis/anova-plane.html",
+    "href": "statistical-analysis/anova-plane.html",
+    "title": "Paper Airplane ANOVA BF[1]",
+    "section": "",
+    "text": "Code\nlibrary(tidyverse)\nlibrary(mosaic)\nlibrary(car)\nlibrary(emmeans)\nlibrary(pander)\nlibrary(DT)\n\ndata1 &lt;- read_csv(\"../data/plane_data.csv\")\n\ndata1 &lt;- data1 %&gt;%\n  mutate(thrower = \"My Wife\")\n\ndata2 &lt;- read_csv(\"../data/plane_data_ethan.csv\")\n\ndata2 &lt;- data2 %&gt;%\n  mutate(thrower=\"Me\")\n\ndata &lt;- bind_rows(data1, data2)"
+  },
+  {
+    "objectID": "statistical-analysis/anova-plane.html#study-design",
+    "href": "statistical-analysis/anova-plane.html#study-design",
+    "title": "Paper Airplane ANOVA BF[1]",
+    "section": "Study Design",
+    "text": "Study Design\n\nDesign Overview\nObjective: Determine which of three paper airplane designs (Bomber, Standard, Stone) go the farthest distance when thrown. Further divided by the skill of the thrower (Me and my Wife)\nPopulation: 15 Paper Airplanes\nResponse Variable: Distance in feet\nTreatment Factor: Folding Design / Thrower\nExperimental Unit: Type of Design / Thrower\nObservational Unit: Each Paper Airplane\n\nRandomization\nWe have employed the following Randomizations:\nRandom Selection of Experimental Units: The sheets of paper used for the experiment were randomly selected from the available paper.\nRandom Assignment of Units to Treatment: The sheets of paper were randomly assigned to one of the three airplane designs: Bomber, Standard, or Stone. The order in which the planes were folded was also randomized.\nRandom Order of Experimental Runs: The order in which the completed airplanes were thrown was randomized. This helped prevent factors such as changes in throwing ability or fatigue from favoring one particular design.\n\n\n\nFactors\n\nControlled - Varied\n\nAirplane design\nThrower of teh airplanes\n\n\n\nControlled - Held Constant\n\nWhere the planes were thrown (The Hinkley Gym)\nType of Paper (A4 print paper)\nStanding position\nFolder of the airplanes (Me)\n\n\n\nNot Controlled - Measured\n\nNone\n\n\n\nNot Controlled - Not Measured\n\nAc cause air movement\nStrength of the throw\n\n\n\n\nTypes of Planes\n\nThe Bomber\n\n\n\nBomber\n\n\nThe Bomber is a plane I made most commonly when I was a child. It is the coolest looking of the three\n\n\nThe Standard\n\n\n\nStandard\n\n\nThis is a standard paper airplane that children first learn to make.\n\n\nThe Stone\n\n\n\nStone\n\n\nThis is the plane my dad used to win a paper airplane contest when I was a child. There is considerable discourse on whether or not this qualifies as a plane. I am on the side of the supporters.\n\n\nAll together\n\nAll models\n\n\n\nAll Models\n\n\nAll Paper Airplane models side by side\n\n\n\n\nHyposthesis\n\\[\n\\text{Level of Significance}=0.05\n\\]\n\nPlane Design\n\\[\nH_0: \\alpha_\\text{Bomber} = \\alpha_\\text{Standard} = \\alpha_\\text{Stone} = 0\n\\]\n\\[\nH_a: \\alpha_\\text{At Least One} \\neq 0\n\\]\nOur Null Hypothesis states that the design of the plane has no effect on the distance thrown. I.E. that the \\(\\alpha\\) is 0 for each level.\nOur Alternative Hypothesis states that at least one design will have a different average distance when thrown than the others.\n\n\nThrower\n\\[\nH_0: \\beta_\\text{Me} = \\beta_\\text{my wife} = 0\n\\]\n\\[\nH_a: \\beta_\\text{Me} \\neq \\beta_\\text{my wife}\n\\]\nOur Null Hypothesis states that the thrower of the plane has no effect on the distance thrown. I.E. that the \\(\\beta\\) is 0 for both levels.\nOur Alternative Hypothesis states that one thrower will have a different average distance when thrown than the others."
+  },
+  {
+    "objectID": "statistical-analysis/anova-plane.html#data-collection",
+    "href": "statistical-analysis/anova-plane.html#data-collection",
+    "title": "Paper Airplane ANOVA BF[1]",
+    "section": "Data Collection",
+    "text": "Data Collection\nWe collected our data by throwing the 15 paper airplanes in an empty gymnasium at the BYUI University as it was the most controlled environment available to us at the time. my wife threw her planes for an earlier experiment (Case Study 1). I threw his at a different time with the same randomizations and experiment structure. We measured how far each plane flew and recorded the data in feet."
+  },
+  {
+    "objectID": "statistical-analysis/anova-plane.html#descriptive-stats",
+    "href": "statistical-analysis/anova-plane.html#descriptive-stats",
+    "title": "Paper Airplane ANOVA BF[1]",
+    "section": "Descriptive Stats",
+    "text": "Descriptive Stats\n\n\nCode\nfavstats(dist ~ type | thrower, data=data) %&gt;% pander()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nthrower\nmin\nQ1\nmedian\nQ3\nmax\nmean\nsd\nn\nmissing\n\n\n\n\nBomber.Me\n19\n19.5\n20\n21\n21.5\n20.2\n1.037\n5\n0\n\n\nStandard.Me\n10.5\n16.5\n19\n19\n20.5\n17.1\n3.959\n5\n0\n\n\nStone.Me\n18\n19.5\n21.5\n22\n23.5\n20.9\n2.162\n5\n0\n\n\nBomber.My Wife\n6\n9.5\n13.5\n19\n29\n15.4\n9.01\n5\n0\n\n\nStandard.My Wife\n8\n17\n18\n21\n21.5\n17.1\n5.436\n5\n0\n\n\nStone.My Wife\n12.5\n18\n20.5\n22\n23\n19.2\n4.192\n5\n0\n\n\nMe\n10.5\n19\n19.5\n21.25\n23.5\n19.4\n3.007\n15\n0\n\n\nMy Wife\n6\n13\n18\n21.25\n29\n17.23\n6.265\n15\n0\n\n\n\n\n\n\n\nCode\nggplot(data, aes(x = type, y = dist, fill = thrower)) +\n  geom_boxplot() +\n  labs(\n    title = \"my wife Has Consistently Wider Ranges\",\n    x = \"Airplane Design\",\n    y = \"Distance (feet)\"\n  ) +\n  theme_minimal(base_size = 14) +\n  scale_fill_manual(values = c(\"firebrick\",\"skyblue\"))"
+  },
+  {
+    "objectID": "statistical-analysis/anova-plane.html#interaction",
+    "href": "statistical-analysis/anova-plane.html#interaction",
+    "title": "Paper Airplane ANOVA BF[1]",
+    "section": "Interaction",
+    "text": "Interaction\n\n\nCode\ninteraction.plot(\n  x.factor = data$type,\n  trace.factor = data$thrower,\n  response = data$dist\n)\n\n\n\n\n\n\n\n\n\nThis graph seems to indicate that there will be a significant interaction by the crossing of lines. To verify this we will need to run the ANOVA Model."
+  },
+  {
+    "objectID": "statistical-analysis/anova-plane.html#analysis",
+    "href": "statistical-analysis/anova-plane.html#analysis",
+    "title": "Paper Airplane ANOVA BF[1]",
+    "section": "Analysis",
+    "text": "Analysis\n\nThe Model\n\\[\n\\underbrace{Y_{ijk}}_\\text{Distance Flown} = \\mu + \\underbrace{\\alpha_i}_\\text{Type of Plane} + \\underbrace{\\beta_j}_\\text{Thrower} + \\underbrace{(\\alpha\\beta)_{ij}}_\\text{Interaction} + \\epsilon_{ijk}\n\\]\n\n\nCode\nmyaov &lt;- aov(dist~type*thrower, data=data)\nsummary(myaov) %&gt;% pander()\n\n\n\nAnalysis of Variance Model\n\n\n\n\n\n\n\n\n\n\n \nDf\nSum Sq\nMean Sq\nF value\nPr(&gt;F)\n\n\n\n\ntype\n2\n47.52\n23.76\n0.9521\n0.4\n\n\nthrower\n1\n35.21\n35.21\n1.411\n0.2465\n\n\ntype:thrower\n2\n29.62\n14.81\n0.5934\n0.5603\n\n\nResiduals\n24\n598.9\n24.95\nNA\nNA\n\n\n\n\n\nThere is, to my surprise, no significance to either the interaction nor the variables. This means that neither the thrower nor the type of plane had an statistically significant effect on the distance flown.\n\nType of plane\n\n\nCode\nggplot(data, aes(x = type, y = dist, color = type)) +\n  geom_point() +\n  stat_summary(fun = mean, geom = \"point\", size = 4) +\n  stat_summary(fun = mean, geom = \"line\", aes(group = 1), linewidth = 1) +\n  stat_summary(\n    fun.data = mean_cl_normal,\n    geom = \"errorbar\",\n    width = 0.15,\n    linewidth = 0.8\n  ) +\n  labs(\n    title = \"The average distance changes by airplane are not significant\",\n    x = \"Airplane Design\",\n    y = \"Mean Distance (feet)\"\n  ) +\n  theme_minimal(base_size = 14)\n\n\n\n\n\n\n\n\n\n\n\nThrower of plane\n\n\nCode\nggplot(data, aes(x = thrower, y = dist, color = thrower)) +\n  geom_point() +\n  stat_summary(fun = mean, geom = \"point\", size = 4) +\n  stat_summary(fun = mean, geom = \"line\", aes(group = 1), linewidth = 1) +\n  stat_summary(\n    fun.data = mean_cl_normal,\n    geom = \"errorbar\",\n    width = 0.15,\n    linewidth = 0.8\n  ) +\n  labs(\n    title = \"The average distance changes by thrower are not significant\",\n    x = \"Airplane Thrower\",\n    y = \"Mean Distance (feet)\"\n  ) +\n  theme_minimal(base_size = 14)\n\n\n\n\n\n\n\n\n\n\n\nInteraction\n\n\nCode\nggplot(data, aes(x = type, y = dist, color = thrower,\n                 group = thrower)) +\n  geom_point() +\n  stat_summary(fun = mean, geom = \"point\", size = 4) +\n  stat_summary(fun = mean, geom = \"line\", linewidth = 1) +\n  stat_summary(\n    fun.data = mean_cl_normal,\n    geom = \"errorbar\",\n    width = 0.15,\n    linewidth = 0.8\n  ) +\n  labs(\n    title = \"Interaction Between Airplane Design and Thrower\",\n    x = \"Airplane Design\",\n    y = \"Mean Distance (feet)\",\n    color = \"Thrower\"\n  ) +\n  theme_minimal(base_size = 14)\n\n\n\n\n\n\n\n\n\n\n\n\nAssumptitions\n\n\nCode\npar(mfrow=c(1,3))\nplot(myaov, which=1)\nqqPlot(myaov$residuals, id=FALSE)\nplot(myaov, which=3)\n\n\n\n\n\n\n\n\n\n\n\nCode\nleveneTest(dist ~ type, data = data) %&gt;% pander()\n\n\n\nLevene’s Test for Homogeneity of Variance (center = median)\n\n\n\n\n\n\n\n\n \nDf\nF value\nPr(&gt;F)\n\n\n\n\ngroup\n2\n0.7884\n0.4648\n\n\n\n27\nNA\nNA\n\n\n\n\n\n\nConstant Variance Due to both the Levene’s Test and the Residual’s Vs Fitted plot This assumption is NOT violated\nNormal Errors The QQplot shows that This assumption is NOT violated\nIndependent Observations The order plot, plus common sense tell us that This assumption is NOT violated\n\nIn summary NO ASSUMPTIONS WERE VIOLATED"
+  },
+  {
+    "objectID": "statistical-analysis/housing-prediction.html",
+    "href": "statistical-analysis/housing-prediction.html",
+    "title": "Predicting Housing Prices with a Two Lines Linear Regression Model",
+    "section": "",
+    "text": "Code\nlibrary(tidyverse)\nlibrary(pander)"
+  },
+  {
+    "objectID": "statistical-analysis/housing-prediction.html#model-specification",
+    "href": "statistical-analysis/housing-prediction.html#model-specification",
+    "title": "Predicting Housing Prices with a Two Lines Linear Regression Model",
+    "section": "Model Specification",
+    "text": "Model Specification\nWe fit a linear model in which the effect of square footage is allowed to differ by neighborhood type:\n\\[\n\\widehat{\\text{SalePrice}}_i = \\beta_0 + \\beta_1\\,\\text{TotalSF}_i + \\beta_2\\,\\text{RichNbrhd}_i + \\beta_3\\,(\\text{TotalSF}_i \\times \\text{RichNbrhd}_i)\n\\]\nwhere \\(\\text{RichNbrhd}_i = 1\\) for a home in a high-priced neighborhood and \\(0\\) otherwise. This gives two lines:\n\\[\n\\text{Standard } (\\text{RichNbrhd}=0):\\quad \\widehat{\\text{SalePrice}} = \\beta_0 + \\beta_1\\,\\text{TotalSF}\n\\]\n\\[\n\\text{Rich } (\\text{RichNbrhd}=1):\\quad \\widehat{\\text{SalePrice}} = (\\beta_0 + \\beta_2) + (\\beta_1 + \\beta_3)\\,\\text{TotalSF}\n\\]\nMeaning that \\(\\beta_2\\) is effectively the change in the intercept and \\(\\beta_3\\) is teh change in the slope when a neighborhood is among the rich labelled."
+  },
+  {
+    "objectID": "statistical-analysis/housing-prediction.html#model-summary",
+    "href": "statistical-analysis/housing-prediction.html#model-summary",
+    "title": "Predicting Housing Prices with a Two Lines Linear Regression Model",
+    "section": "Model Summary",
+    "text": "Model Summary\n\n\nCode\nclass_lm &lt;- lm(SalePrice ~ TotalSF * RichNbrhd, data = train_clean)\nsummary(class_lm) %&gt;% pander()\n\n\n\n\n\n\n\n\n\n\n\n\n \nEstimate\nStd. Error\nt value\nPr(&gt;|t|)\n\n\n\n\n(Intercept)\n27038\n4078\n6.63\n4.73e-11\n\n\nTotalSF\n56.59\n1.594\n35.5\n2.002e-199\n\n\nRichNbrhd1\n-120735\n16952\n-7.122\n1.662e-12\n\n\nTotalSF:RichNbrhd1\n57.35\n4.696\n12.21\n1.004e-32\n\n\n\n\nFitting linear model: SalePrice ~ TotalSF * RichNbrhd\n\n\n\n\n\n\n\n\nObservations\nResidual Std. Error\n\\(R^2\\)\nAdjusted \\(R^2\\)\n\n\n\n\n1460\n42504\n0.7143\n0.7137"
   }
 ]

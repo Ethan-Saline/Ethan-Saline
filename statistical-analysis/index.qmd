@@ -1,11 +1,203 @@
 ---
-title: "Statistical Analysis"
+title: ""
 ---
 
-Heart Mortality
-Housing Perdiction
-ANOVA Plane
-Influenza-Like Illness Time Series
-Patho-Nueral stuff
+<div class="portfolio-intro">
+  <p class="eyebrow">STATISTICAL ANALYSIS</p>
+  <h2>Statistical Projects</h2>
+  <p>
+    A collection of statistical investigations, predictive models, and
+    analytical projects. Each project applies statistical methods to
+    real-world questions, combining data exploration, model development,
+    and interpretation.
+  </p>
+</div>
 
-Full ARIMA MODEl
+::: {.project-grid}
+
+::: {.project-card}
+<span class="project-number">01 / STATISTICS</span>
+
+## Heart Attack Mortality
+
+A Logistic Regression Model which uses minimal variables in order to be graphable in 3D as well as completely explanable. 
+
+**OVERVIEW**
+
+This model uses Heart Ejection Fraction, Serum Creatinine Level, and whether the patient was over or under 80 years old to predict the probability of mortality while in treatment for a heart attack. The model has 80.3% correct classification using only these three variables.
+
+[Explore Project →](heart-mortality.qmd)
+:::
+
+::: {.project-card}
+<span class="project-number">02 / PREDICTIVE ANALYTICS</span>
+
+## Housing Prediction
+
+A predictive modeling project uses a Two Lines Linear Regression to predict housing prices. The goal is complete intelligabilty as opposed to simply attempting to get good predictions. 
+
+**OVERVIEW**
+
+This model is based on house square footage but then splits into two lines based on whether that neighborhood is rich or not. This is acheived through a linear regression model using a binary variable as a "switch".
+
+[Explore Project →](housing-prediction.qmd)
+:::
+
+::: {.project-card}
+<span class="project-number">03 / EXPERIMENTAL DESIGN</span>
+
+## ANOVA Plane
+
+An application of Analysis of Variance (ANOVA) to investigate differences between groups and evaluate statistical significance.
+
+**OVERVIEW**
+
+This is a playful usage of a BF[2] ANOVA using 3 types of paper airplanes and whether I threw the plane or if my wife threw the plane to see if there are any significant changes in distance flown.
+
+[Explore Project →](anova-plane.qmd)
+:::
+
+::: {.project-card}
+<span class="project-number">04 / TIME SERIES</span>
+
+## Influenza-Like Illness Time Series
+
+NEED TO UPLOAD
+
+**OVERVIEW**
+
+NOT ON GIT YET
+
+[Explore Project →](influenza-like-illness.qmd)
+:::
+
+::: {.project-card}
+<span class="project-number">05 / STATISTICAL THEORY</span>
+
+## Patho-Neural Analysis
+
+NEED TO UPLOAD
+
+**OVERVIEW**
+
+NOT ON GIT YET
+
+[Explore Project →](patho-neural.qmd)
+:::
+
+::: {.project-card}
+<span class="project-number">06 / ADVANCED MODELING</span>
+
+## Full ARIMA Model
+
+NEED TO UPLOAD
+
+**OVERVIEW**
+
+NOT ON GIT YET
+
+[Explore Project →](full-arima-model.qmd)
+:::
+
+:::
+
+<style>
+.portfolio-intro {
+  padding: 2.5rem 0 2rem 0;
+  max-width: 780px;
+}
+
+.eyebrow {
+  color: #3985a8;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  margin-bottom: 0.8rem;
+}
+
+.portfolio-intro h2 {
+  font-size: 2.35rem;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.portfolio-intro > p:last-child {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--bs-secondary-color);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.project-card {
+  padding: 1.7rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 14px;
+  background: var(--bs-body-bg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 0;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+}
+
+.project-number {
+  display: block;
+  color: #3985a8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.2rem;
+}
+
+.project-card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-top: 0;
+  margin-bottom: 0.85rem;
+}
+
+.project-card p {
+  line-height: 1.7;
+  color: var(--bs-secondary-color);
+}
+
+.project-card strong {
+  color: var(--bs-body-color);
+  font-size: 0.73rem;
+  letter-spacing: 0.12em;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 0.65rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-intro h2 {
+    font-size: 1.9rem;
+  }
+}
+</style>

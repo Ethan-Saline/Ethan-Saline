@@ -22,6 +22,7 @@ website:
 
 format:
   html:
+    code-fold: true
     theme: cosmo
     toc: true
     smooth-scroll: true

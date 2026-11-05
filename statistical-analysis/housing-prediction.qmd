@@ -1,0 +1,147 @@
+---
+title: "Predicting Housing Prices with a Two Lines Linear Regression Model"
+---
+
+```{r}
+#| label: setup
+#| include: false
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+
+```{r}
+#| label: libraries
+library(tidyverse)
+library(pander)
+```
+
+# Overview
+
+This formal analysis predicts home sale prices from total square footage and neighborhood type, and tests whether the value of square footage differs between wealthy neighborhoods and all others.
+
+::: {.callout-note title="Approach"}
+1. Clean and engineer features from the raw housing data.
+2. Fit a linear model with a **TotalSF × RichNbrhd interaction** (two lines).
+3. Validate the model on held-out data.
+4. Visualize the fitted lines and interpret the results.
+:::
+
+# Data Preparation
+
+The dataset was cleaned with a custom `Clean()` function, which:
+
+- **Re-codes** `Alley`, replacing missing values with "No Alley"
+- **Creates** `TotalSF`, the sum of first-floor, second-floor, and basement square footage
+- **Creates** `RichNbrhd`, a flag for homes in StoneBr, NridgHt, or NoRidge
+- **Returns** a cleaned dataset ready for modeling
+
+```{r}
+#| label: clean-data
+Clean <- function(df) {
+  df %>%
+    mutate(
+      Alley = as.factor(replace_na(as.character(Alley), "No Alley")),
+      TotalSF = X1stFlrSF + X2ndFlrSF + TotalBsmtSF,
+      RichNbrhd = as.factor(if_else(Neighborhood %in% c("StoneBr", "NridgHt", "NoRidge"), 1, 0))
+    )
+}
+
+train <- read.csv("../data/housing_train.csv", stringsAsFactors = TRUE)
+train_clean <- Clean(train)
+```
+
+# Model Fitting
+
+## Model Specification
+
+We fit a linear model in which the effect of square footage is allowed to differ by neighborhood type:
+
+$$
+\widehat{\text{SalePrice}}_i = \beta_0 + \beta_1\,\text{TotalSF}_i + \beta_2\,\text{RichNbrhd}_i + \beta_3\,(\text{TotalSF}_i \times \text{RichNbrhd}_i)
+$$
+
+where $\text{RichNbrhd}_i = 1$ for a home in a high-priced neighborhood and $0$ otherwise. This gives two lines:
+
+$$
+\text{Standard } (\text{RichNbrhd}=0):\quad \widehat{\text{SalePrice}} = \beta_0 + \beta_1\,\text{TotalSF}
+$$
+
+$$
+\text{Rich } (\text{RichNbrhd}=1):\quad \widehat{\text{SalePrice}} = (\beta_0 + \beta_2) + (\beta_1 + \beta_3)\,\text{TotalSF}
+$$
+
+Meaning that $\beta_2$ is effectively the *change in the intercept* and $\beta_3$ is teh *change in the slope* when a neighborhood is among the rich labelled.
+
+## Model Summary
+
+```{r}
+#| label: fit-model
+class_lm <- lm(SalePrice ~ TotalSF * RichNbrhd, data = train_clean)
+summary(class_lm) %>% pander()
+```
+
+# Train/Test Validation
+
+To check how well the model generalizes, we hold out 1/3 of homes as a test set, fit on the remaining 2/3, and measure prediction error on the held-out homes.
+
+```{r}
+#| label: validation
+set.seed(121)
+
+keep <- sample(nrow(train_clean), floor(0.68 * nrow(train_clean)))
+mytrain <- train_clean[keep, ]
+mytest <- train_clean[-keep, ]
+
+train_lm <- lm(SalePrice ~ TotalSF * RichNbrhd, data = mytrain)
+summary(train_lm) %>% pander()
+
+predictions <- predict(train_lm, newdata = mytest)
+rmse <- sqrt(mean((predictions - mytest$SalePrice)^2))
+
+pander(paste("RMSE on test set:", scales::dollar(rmse)))
+```
+
+The model fit on the training set explains about 75% of the variation in sale price (adjusted $R^2 = 0.7481$), and its test-set RMSE is `r scales::dollar(rmse)`. The coefficients are close to those from the full-data model, which suggests the relationship is stable and not an artifact of one sample.
+
+# Graphing the Model
+
+```{r}
+#| label: plot-model
+grid_df <- expand.grid(
+  TotalSF = seq(min(train_clean$TotalSF), max(train_clean$TotalSF), length.out = 200),
+  RichNbrhd = levels(train_clean$RichNbrhd)
+)
+grid_df$Predicted <- predict(class_lm, newdata = grid_df)
+
+ggplot(train_clean, aes(x = TotalSF, y = SalePrice, color = RichNbrhd)) +
+  geom_point(alpha = 0.4) +
+  geom_line(data = grid_df, aes(y = Predicted), linewidth = 1.2) +
+  scale_color_manual(values = c("0" = "#2780e3", "1" = "#d9534f"),
+                     labels = c("Standard", "Rich")) +
+  scale_x_continuous(labels = scales::comma) +
+  scale_y_continuous(labels = scales::dollar) +
+  labs(
+    title = "Fitted Regression Model with Interaction",
+    subtitle = "Separate regression lines for Rich vs. Non-Rich Neighborhoods",
+    x = "Total Square Footage",
+    y = "Sale Price",
+    color = "Neighborhood"
+  ) +
+  theme_bw()
+```
+
+# Interpretation of Model
+
+Total square footage is a strong predictor of housing price, and its value depends on the neighborhood. The model explains about 71% of the variation in sale prices (adjusted $R^2 = 0.7137$), and every term is highly significant.
+
+| Neighborhood type | Intercept | Price per additional sq. ft. |
+|:------------------|:---------:|:----------------------------:|
+| Standard | \$27,038 | about **\$57** |
+| Rich | about −\$93,697 | about **\$114** |
+
+In standard neighborhoods, each additional square foot increases the expected sale price by about **\$57** (*p* < 0.001). The significant interaction term shows that square footage is worth even more in rich neighborhoods. There, the price rises by an additional **\$57** per square foot (*p* < 0.001), for a total of about **\$114** per square foot. In other words, a square foot in a rich neighborhood is worth roughly **twice** a square foot elsewhere.
+
+::: {.callout-tip title="Key Takeaway"}
+Larger homes in rich neighborhoods command substantially higher prices than similarly sized homes in other areas. Neighborhood quality acts as an **amplifier** of the value of home size.
+:::
+
+The intercept for rich neighborhoods is much lower (a difference of about −\$120,735), but the much steeper slope quickly outweighs it. The two lines cross at roughly **2,105 square feet**, meaning that above this size a home in a rich neighborhood is predicted to sell for more than an equally sized home elsewhere. The negative rich-neighborhood intercept is not meaningful on its own, because no home has zero square feet; it simply anchors the steeper line.
