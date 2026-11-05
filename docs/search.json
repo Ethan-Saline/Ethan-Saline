@@ -200,14 +200,14 @@
     "href": "statistical-analysis/anova-plane.html#data-collection",
     "title": "Paper Airplane ANOVA BF[1]",
     "section": "Data Collection",
-    "text": "Data Collection\nWe collected our data by throwing the 15 paper airplanes in an empty gymnasium at the BYUI University as it was the most controlled environment available to us at the time. my wife threw her planes for an earlier experiment (Case Study 1). I threw his at a different time with the same randomizations and experiment structure. We measured how far each plane flew and recorded the data in feet."
+    "text": "Data Collection\nWe collected our data by throwing the 15 paper airplanes in an empty gymnasium at the BYUI University as it was the most controlled environment available to us at the time. My wife threw her planes for an earlier experiment (Case Study 1). I threw his at a different time with the same randomizations and experiment structure. We measured how far each plane flew and recorded the data in feet."
   },
   {
     "objectID": "statistical-analysis/anova-plane.html#descriptive-stats",
     "href": "statistical-analysis/anova-plane.html#descriptive-stats",
     "title": "Paper Airplane ANOVA BF[1]",
     "section": "Descriptive Stats",
-    "text": "Descriptive Stats\n\n\nCode\nfavstats(dist ~ type | thrower, data=data) %&gt;% pander()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nthrower\nmin\nQ1\nmedian\nQ3\nmax\nmean\nsd\nn\nmissing\n\n\n\n\nBomber.Me\n19\n19.5\n20\n21\n21.5\n20.2\n1.037\n5\n0\n\n\nStandard.Me\n10.5\n16.5\n19\n19\n20.5\n17.1\n3.959\n5\n0\n\n\nStone.Me\n18\n19.5\n21.5\n22\n23.5\n20.9\n2.162\n5\n0\n\n\nBomber.My Wife\n6\n9.5\n13.5\n19\n29\n15.4\n9.01\n5\n0\n\n\nStandard.My Wife\n8\n17\n18\n21\n21.5\n17.1\n5.436\n5\n0\n\n\nStone.My Wife\n12.5\n18\n20.5\n22\n23\n19.2\n4.192\n5\n0\n\n\nMe\n10.5\n19\n19.5\n21.25\n23.5\n19.4\n3.007\n15\n0\n\n\nMy Wife\n6\n13\n18\n21.25\n29\n17.23\n6.265\n15\n0\n\n\n\n\n\n\n\nCode\nggplot(data, aes(x = type, y = dist, fill = thrower)) +\n  geom_boxplot() +\n  labs(\n    title = \"my wife Has Consistently Wider Ranges\",\n    x = \"Airplane Design\",\n    y = \"Distance (feet)\"\n  ) +\n  theme_minimal(base_size = 14) +\n  scale_fill_manual(values = c(\"firebrick\",\"skyblue\"))"
+    "text": "Descriptive Stats\n\n\nCode\nfavstats(dist ~ type | thrower, data=data) %&gt;% pander()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nthrower\nmin\nQ1\nmedian\nQ3\nmax\nmean\nsd\nn\nmissing\n\n\n\n\nBomber.Me\n19\n19.5\n20\n21\n21.5\n20.2\n1.037\n5\n0\n\n\nStandard.Me\n10.5\n16.5\n19\n19\n20.5\n17.1\n3.959\n5\n0\n\n\nStone.Me\n18\n19.5\n21.5\n22\n23.5\n20.9\n2.162\n5\n0\n\n\nBomber.My Wife\n6\n9.5\n13.5\n19\n29\n15.4\n9.01\n5\n0\n\n\nStandard.My Wife\n8\n17\n18\n21\n21.5\n17.1\n5.436\n5\n0\n\n\nStone.My Wife\n12.5\n18\n20.5\n22\n23\n19.2\n4.192\n5\n0\n\n\nMe\n10.5\n19\n19.5\n21.25\n23.5\n19.4\n3.007\n15\n0\n\n\nMy Wife\n6\n13\n18\n21.25\n29\n17.23\n6.265\n15\n0\n\n\n\n\n\n\n\nCode\nggplot(data, aes(x = type, y = dist, fill = thrower)) +\n  geom_boxplot() +\n  labs(\n    title = \"My Wife Has Consistently Wider Ranges\",\n    x = \"Airplane Design\",\n    y = \"Distance (feet)\"\n  ) +\n  theme_minimal(base_size = 14) +\n  scale_fill_manual(values = c(\"firebrick\",\"skyblue\"))"
   },
   {
     "objectID": "statistical-analysis/anova-plane.html#interaction",
@@ -243,5 +243,19 @@
     "title": "Predicting Housing Prices with a Two Lines Linear Regression Model",
     "section": "Model Summary",
     "text": "Model Summary\n\n\nCode\nclass_lm &lt;- lm(SalePrice ~ TotalSF * RichNbrhd, data = train_clean)\nsummary(class_lm) %&gt;% pander()\n\n\n\n\n\n\n\n\n\n\n\n\n \nEstimate\nStd. Error\nt value\nPr(&gt;|t|)\n\n\n\n\n(Intercept)\n27038\n4078\n6.63\n4.73e-11\n\n\nTotalSF\n56.59\n1.594\n35.5\n2.002e-199\n\n\nRichNbrhd1\n-120735\n16952\n-7.122\n1.662e-12\n\n\nTotalSF:RichNbrhd1\n57.35\n4.696\n12.21\n1.004e-32\n\n\n\n\nFitting linear model: SalePrice ~ TotalSF * RichNbrhd\n\n\n\n\n\n\n\n\nObservations\nResidual Std. Error\n\\(R^2\\)\nAdjusted \\(R^2\\)\n\n\n\n\n1460\n42504\n0.7143\n0.7137"
+  },
+  {
+    "objectID": "statistical-analysis/index.html#paper-airplane-anova",
+    "href": "statistical-analysis/index.html#paper-airplane-anova",
+    "title": "Ethan Saline's Portfolio",
+    "section": "Paper Airplane ANOVA",
+    "text": "Paper Airplane ANOVA\nAn application of Analysis of Variance (ANOVA) to investigate differences between groups and evaluate statistical significance.\nOVERVIEW\nThis is a playful usage of a BF[2] ANOVA using 3 types of paper airplanes and whether I threw the plane or if my wife threw the plane to see if there are any significant changes in distance flown.\nExplore Project →"
+  },
+  {
+    "objectID": "statistical-analysis/index.html#house-price-prediction",
+    "href": "statistical-analysis/index.html#house-price-prediction",
+    "title": "Ethan Saline's Portfolio",
+    "section": "House Price Prediction",
+    "text": "House Price Prediction\nA predictive modeling project uses a Two Lines Linear Regression to predict housing prices. The goal is complete intelligabilty as opposed to simply attempting to get good predictions.\nOVERVIEW\nThis model is based on house square footage but then splits into two lines based on whether that neighborhood is rich or not. This is acheived through a linear regression model using a binary variable as a “switch”.\nExplore Project →"
   }
 ]

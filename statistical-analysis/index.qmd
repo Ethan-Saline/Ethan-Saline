@@ -16,7 +16,7 @@ title: ""
 ::: {.project-grid}
 
 ::: {.project-card}
-<span class="project-number">01 / STATISTICS</span>
+<span class="project-number">01 / LOGISTIC REGRESSION</span>
 
 ## Heart Attack Mortality
 
@@ -30,9 +30,9 @@ This model uses Heart Ejection Fraction, Serum Creatinine Level, and whether the
 :::
 
 ::: {.project-card}
-<span class="project-number">02 / PREDICTIVE ANALYTICS</span>
+<span class="project-number">02 / ADVANCE LINEAR REGRESSION</span>
 
-## Housing Prediction
+## House Price Prediction
 
 A predictive modeling project uses a Two Lines Linear Regression to predict housing prices. The goal is complete intelligabilty as opposed to simply attempting to get good predictions. 
 
@@ -46,7 +46,7 @@ This model is based on house square footage but then splits into two lines based
 ::: {.project-card}
 <span class="project-number">03 / EXPERIMENTAL DESIGN</span>
 
-## ANOVA Plane
+## Paper Airplane ANOVA
 
 An application of Analysis of Variance (ANOVA) to investigate differences between groups and evaluate statistical significance.
 
