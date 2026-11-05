@@ -16,6 +16,8 @@ website:
         text: Statistical Analysis
       - href: models/index.qmd
         text: Models & Theory
+      - href: cheat-sheets/index.qmd
+        text: Cheat Sheets
       
 
 format:

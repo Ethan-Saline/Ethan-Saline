@@ -2,86 +2,338 @@
 title: "Models & Theory"
 ---
 
-# Linear Regression {.tabset .tabset-pills}
+# Linear Regression
+
+::::: {.panel-tabset}
+
 ## Overview
+
+Overview text.
+
 ## Mathematical Model
-## Application {.tabset .tabset-pills}
+
+Math text.
+
+## Application
+
+::: {.panel-tabset}
+
 ### Python
+
+Python text.
+
 ### R
 
-# Logistic Regression {.tabset .tabset-pills}
+R text.
+
+:::
+
+:::::
+
+# Logistic Regression
+
+::::: {.panel-tabset}
+
 ## Overview
+
+Overview text.
+
 ## Mathematical Model
-## Application {.tabset .tabset-pills}
+
+Math text.
+
+## Application
+
+::: {.panel-tabset}
+
 ### Python
+
+Python text.
+
 ### R
 
-# Holts Winters {.tabset .tabset-pills}
+R text.
+
+:::
+
+:::::
+
+# Holts Winters
+
+::::: {.panel-tabset}
+
 ## Overview
+
+Overview text.
+
 ## Mathematical Model
-## Application {.tabset .tabset-pills}
+
+Math text.
+
+## Application
+
+::: {.panel-tabset}
+
 ### Python
+
+Python text.
+
 ### R
 
-# ARIMA {.tabset .tabset-pills}
+R text.
+
+:::
+
+:::::
+
+# ARIMA
+
+::::: {.panel-tabset}
+
 ## Overview
+
+Overview text.
+
 ## Mathematical Model
-## Application {.tabset .tabset-pills}
+
+Math text.
+
+## Application
+
+::: {.panel-tabset}
+
 ### Python
+
+Python text.
+
 ### R
 
-# Decision Tree {.tabset .tabset-pills}
+R text.
+
+:::
+
+:::::
+
+# Decision Tree
+
+::::: {.panel-tabset}
+
 ## Overview
+
+Overview text.
+
 ## Mathematical Model
-## Application {.tabset .tabset-pills}
+
+Math text.
+
+## Application
+
+::: {.panel-tabset}
+
 ### Python
+
+Python text.
+
 ### R
 
-# Random Forest{.tabset .tabset-pills}
+R text.
+
+:::
+
+:::::
+
+# Random Forest
+
+::::: {.panel-tabset}
+
 ## Overview
+
+Overview text.
+
 ## Mathematical Model
-## Application {.tabset .tabset-pills}
+
+Math text.
+
+## Application
+
+::: {.panel-tabset}
+
 ### Python
+
+Python text.
+
 ### R
 
-# XGBoost{.tabset .tabset-pills}
+R text.
+
+:::
+
+:::::
+
+# XGBoost
+
+::::: {.panel-tabset}
+
 ## Overview
+
+Overview text.
+
 ## Mathematical Model
-## Application {.tabset .tabset-pills}
+
+Math text.
+
+## Application
+
+::: {.panel-tabset}
+
 ### Python
+
+Python text.
+
 ### R
 
-# Neural Networks{.tabset .tabset-pills}
+R text.
+
+:::
+
+:::::
+
+# Neural Networks
+
+::::: {.panel-tabset}
+
 ## Overview
+
+Overview text.
+
 ## Mathematical Model
-## Application {.tabset .tabset-pills}
+
+Math text.
+
+## Application
+
+::: {.panel-tabset}
+
 ### Python
+
+Python text.
+
 ### R
 
-# CNNs{.tabset .tabset-pills}
+R text.
+
+:::
+
+:::::
+
+# CNNs
+
+::::: {.panel-tabset}
+
 ## Overview
+
+Overview text.
+
 ## Mathematical Model
-## Application {.tabset .tabset-pills}
+
+Math text.
+
+## Application
+
+::: {.panel-tabset}
+
 ### Python
+
+Python text.
+
 ### R
 
-# RNNs{.tabset .tabset-pills}
+R text.
+
+:::
+
+:::::
+
+# RNNs
+
+::::: {.panel-tabset}
+
 ## Overview
+
+Overview text.
+
 ## Mathematical Model
-## Application {.tabset .tabset-pills}
+
+Math text.
+
+## Application
+
+::: {.panel-tabset}
+
 ### Python
+
+Python text.
+
 ### R
 
-# Transformers{.tabset .tabset-pills}
+R text.
+
+:::
+
+:::::
+
+# Transformers
+
+::::: {.panel-tabset}
+
 ## Overview
+
+Overview text.
+
 ## Mathematical Model
-## Application {.tabset .tabset-pills}
+
+Math text.
+
+## Application
+
+::: {.panel-tabset}
+
 ### Python
+
+Python text.
+
 ### R
 
-# Agents{.tabset .tabset-pills}
+R text.
+
+:::
+
+:::::
+
+# Agents
+
+::::: {.panel-tabset}
+
 ## Overview
+
+Overview text.
+
 ## Mathematical Model
-## Application {.tabset .tabset-pills}
+
+Math text.
+
+## Application
+
+::: {.panel-tabset}
+
 ### Python
+
+Python text.
+
 ### R
+
+R text.
+
+:::
+
+:::::
